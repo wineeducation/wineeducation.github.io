@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+         <META NAME="robots" CONTENT="noindex, nofollow">
+         <title>Wine Education</title>
+           
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+         
+         <link rel="stylesheet" type="text/css" href="main.css">
+         <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400,500' rel='stylesheet' type='text/css'>
+
+         <link rel="icon" href="favicon.svg" type="image/svg+xml">    
+         <link rel="mask-icon" href="safari-pinned-tab.svg">
+         <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	 <link rel="shortcut icon" href="favicon.ico" sizes="any">
+	
+</head>
+	
+<script>
+	function showModal(modalID){
+		document.body.style.overflow = 'hidden';
+		document.body.classList.add('noScroll');
+		document.getElementById('top').classList.replace('visible', 'hidden');
+		document.getElementById('content').classList.replace('visible', 'hidden');
+			
+		document.getElementById(modalID).classList.replace('hidden', 'visible');
+			
+		return;
+	}
+	function hideModal(modalID){
+		document.body.style.overflow = 'auto';
+		document.body.classList.remove('noScroll');
+		document.getElementById('top').classList.replace('hidden', 'visible');
+		document.getElementById('content').classList.replace('hidden', 'visible');
+			
+		document.getElementById(modalID).classList.replace('visible', 'hidden');
+			
+		return;
+	}
+	function setDefaultDate(){
+		 date = new Date();
+		 year = date.getFullYear();
+		 month = date.getMonth()+1;
+		 day = date.getDate();
+
+		 maxMonth = month+4;
+		 maxYear = year;
+
+		 if (maxMonth > 12){
+		     maxMonth -= 12;	 
+		     maxYear++;
+		 }   
+			 
+		 document.getElementById('date').value = year + '-' + String(month).padStart(2, '0') + '-' + String(day).padStart(2, '0');
+		 document.getElementById('date').min = year + '-' + String(month).padStart(2, '0') + '-' + String(day).padStart(2, '0');
+		 document.getElementById('date').max = maxYear + '-' + String(maxMonth).padStart(2, '0') + '-' + String(day).padStart(2, '0');
+
+		 return year;
+	}
+</script>
+	
+<!--–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->	
+
+
+<body onload="setDefaultDate()">
+	<div id="top" class="visible">
+			<div style="margin-top:10vh;">
+				<img src="images/name.svg" id="nameLogo" class="fadeIn0">
+				<div id="subheader" class="fadeIn1" >WINE EDUCATION</div>
+			</div>
+				<img src="images/chevron.svg" id="chevron" class="fadeIn2">
+	 </div>
+	
+	<div id="content" class="visible">	      
+		<img src="images/portrait.png" id="portrait">
+		<p id="paragraph">
+			When I lived in France, a friend of mine would teach me about wine while we sat around the dinner table, cooked meals, and hung out on the patio. 
+			The experience marked me deeply, one I hope to share with you through my in-home wine class and guided tasting. We should all get to learn 
+			about wine the way I did, comfortably in our own space with those we want there with us. 
+			<br><br>
+			Learn why different wines taste the way they do, what to say and ask in a wine shop or restaurant, how to pair wine with food, and a ton of tips and 
+			tricks. Afterwards, you'll browse wine lists with an easy confidence and feel at home in any wine shop.
+		</p>
+		
+		<button type="button" class="button" style="margin-bottom:2rem;" onclick="showModal('FAQModal')">FAQ</button>
+                <button type="button" class="button" onclick="showModal('ReservationsModal')">RESERVATIONS</button>
+		
+		<div style="display:block;">
+			<img src="images/logo.svg" id="logo" style="width: 7.5rem;  margin:5rem auto;">
+		</div>
+	</div>
+
+<!--–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->	
+
+	
+	<div id="ReservationsModal" class="modal hidden">
+		
+	<div class="modalContainer">
+		<p class="title">Reservations</p>
+		
+	<div class="modalBody" style="touch-action: none; -ms-touch-action: none;">
+		<form id="reservations" action="https://getform.io/f/0f7eb169-4025-4982-bcd9-870d3556430c" method="post" style="margin:0; padding:0; text-align:center;">
+			<input type="text" id="name" name="Name" placeholder="Name *" class="formQ" required>            
+			<input type="email" id="email" name="Email" placeholder="Email *" class="formQ" required>
+			<input type="tel" id="phone" name="Phone" placeholder="Phone" class="formQ">
+
+			<div class="flex-container" style="margin-bottom:1.5rem;">
+				<div style="width:64%;"><input id="city" autocomplete="home city" name="City" placeholder="City" class="formInline"></div>  
+				<div style="width:1%;"></div>
+				<div style="width:35%;"><input type="tel" autocomplete="postal-code" id="zip" pattern="[0-9]{5}" name="ZIP" placeholder="Zip *" min="02000" max="02500" step="1" class="formInline" required></div>
+			</div>
+
+			<div class="flex-container" style="margin-bottom:.3rem;">
+				<div style="width:64%;"><input type="date" id="date" name="Date" value="" min="" class="formInline" ></div>
+				<div style="width:1%;"></div>
+				<div style="width:35%;"><input type="time" id="time" name="Time" value="19:00" class="formInline"></div> 
+			</div>
+                     
+			<select name="Attendees" id="attendance" class="formQ" style="margin-bottom:.3rem;">
+				<option value="" disabled selected>Number of Attendees</option>
+				<option value="4 or fewer">four or fewer</option>
+				<option value="5">five</option>
+				<option value="6">six</option>
+				<option value="7">seven</option>
+				<option value="8">eight or more</option>
+				<option value="corporate">corporate</option>
+			</select>
+
+			<textarea id="details" name="Details" class="formQ" style="margin-bottom:1rem; resize:none;" rows="4" placeholder="details, preferences, selected wine themes, and other information"></textarea>
+			
+			<div style="padding:0; margin-bottom:0;">
+				<button type="submit" class="button">REQUEST</button>
+			</div>
+		</form>
+
+		<svg class="close block" viewBox="0 0 100 100" fill="#E9DCC9" stroke="#030112" stroke-width="5" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" onclick="hideModal('ReservationsModal')">
+
+ 			<circle cx="50" cy="50" r="47"/>
+			<line x1="25" y1="50" x2="50" y2="25"/>
+ 			<line x1="25" y1="50" x2="50" y2="75"/>
+			<line x1="27" y1="50" x2="75" y2="50"/>
+	</div>
+	</div>	
+	</div>
+
+<!--–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->	
+
+	
+	<div id="FAQModal" class="modal hidden">
+		
+	<div class="modalContainer">
+		<p class="title">FAQ</p>
+		
+	<div class="modalBody">
+			<div class="sectionHeader" style="margin-top:0;">How it works...</div>
+			The program costs $50 per person, not including wine, and lasts up to two hours.
+			<br><br>
+		
+			I offer a variety of tasting themes that you can choose from.<br>
+			<ul>
+			  <li>Choose from the list below.</li>
+			  <li>Give me a budget and a wine shop to work with.</li>
+			  <li>I'll choose specific bottles and have them set aside, 
+			     ready for you to pay for and pick up (or have delivered).</li>
+			</ul>
+
+			We can also shop together, in person, if that interests you.
+			<b>Due to liquor licensing restrictions, I cannot provide or bring the wine with me.</b>
+			<br>
+		
+			<div class="sectionHeader">Themes</div>
+			<b>Degustation</b><br>white and red wines selected to demonstrate the principles of wine tasting<br><br>
+			<b>Chef's Kiss</b><br>wines that pair with a specific cuisine<br><br>
+			<b>The Gamut</b><br>sparkling, white, orange, rosé, red, dessert<br><br>
+			<b>All Business</b><br>wines ordered at steakhouses and seafood restaurants<br><br>
+			<b>Au Naturale</b><br>interesting, weird, and even a little funky<br><br>
+			<b>Showdown</b><br>same grapes, different countries
+			<br>
+		
+			<div class="sectionHeader">Certifications</div>
+			<b>WSET, Level 3 Award in Wines</b>
+			<br>
+			&emsp;passed with distinction
+			<br><br>
+			<b>Court of Master Sommeliers</b>
+			<br>
+			&emsp;Introductory Course
+		        <br><br>
+	</div>
+		
+		<svg class="close absolute" viewBox="0 0 100 100" fill="#E9DCC9" stroke="#030112" stroke-width="5" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" onclick="hideModal('FAQModal')">
+
+	 		<circle cx="50" cy="50" r="47"/>
+			<line x1="25" y1="50" x2="50" y2="25"/>
+ 			<line x1="25" y1="50" x2="50" y2="75"/>
+			<line x1="27" y1="50" x2="75" y2="50"/>
+		  </svg>
+	
+	</div>	
+	</div>
+
+</body>	
+</html>
