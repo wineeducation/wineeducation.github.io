@@ -479,13 +479,13 @@ input::-webkit-inner-spin-button {
 
   svg {
 	stroke: #E9DCC990;
+	fill: #1F1F1F;
+	background-color: transparent;
   }
 
   Svg:hover {
         stroke: #E9DCC960;
   }
-
-  circle {fill:#1F1F1F;}
 	
   button:hover {
       color: #E9DCC960;
