@@ -21,6 +21,7 @@ body {
   scroll-behavior: smooth;
   font-family: Quicksand;
   color:#030112;
+  background-color:#E9DCC9;
 
   touch-action: pan-y;
   -ms-touch-action: pan-y;
