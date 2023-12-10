@@ -490,4 +490,11 @@ input::-webkit-inner-spin-button {
   button:hover {
       color: #E9DCC960;
   }
+
+input::placeholder {
+    color: #E9DCC960;
+}
+textarea::placeholder{
+    color: #E9DCC960;
+}
 }
