@@ -64,6 +64,10 @@ textarea, input {
   box-sizing: border-box;
 }
 
+svg{
+  background: transparent;
+}
+
 button {
   display:block;
   margin:0 auto;
