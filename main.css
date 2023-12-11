@@ -468,6 +468,7 @@ input::-webkit-inner-spin-button {
    -ms-touch-action: none;
 }
 
+/*
 @media (prefers-color-scheme: dark) {
   body {
       background-color:#1F1F1F;
@@ -498,4 +499,6 @@ input::placeholder {
 textarea::placeholder{
     color: #E9DCC960;
 }
+*/
+
 }
