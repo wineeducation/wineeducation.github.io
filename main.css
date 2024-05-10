@@ -408,6 +408,9 @@ select {
   
   font-size:1.2rem;
   font-variant:small-caps;
+
+  overflow-y:auto;
+  overflow-x:hidden;
 }
 
 input[type="date"]{
