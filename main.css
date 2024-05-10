@@ -408,10 +408,6 @@ select {
   
   font-size:1.2rem;
   font-variant:small-caps;
-  
-  overflow:hidden;
-  touch-action: none;
-   -ms-touch-action: none;
 }
 
 input[type="date"]{
@@ -449,9 +445,6 @@ input::-webkit-inner-spin-button {
   display:flex;
   flex-direction:row;
   justify-content: space-between;
-
-   touch-action: none;
-   -ms-touch-action: none;
 }
 
 .formInline {
@@ -467,42 +460,6 @@ input::-webkit-inner-spin-button {
   border:.1rem solid;
   border-radius:5px;
   font-size:1.2rem;
-
-  touch-action: none;
-   -ms-touch-action: none;
 }
-
-/*
-@media (prefers-color-scheme: dark) {
-  body {
-      background-color:#1F1F1F;
-  }
-
-  * {
-    color: #E9DCC990;
-    background-color: #1F1F1F;
-  }
-
-  svg {
-	stroke: #E9DCC990;
-	fill: #1F1F1F;
-	background-color: transparent;
-  }
-
-  Svg:hover {
-        stroke: #E9DCC960;
-  }
-	
-  button:hover {
-      color: #E9DCC960;
-  }
-
-input::placeholder {
-    color: #E9DCC960;
-}
-textarea::placeholder{
-    color: #E9DCC960;
-}
-*/
 
 }
