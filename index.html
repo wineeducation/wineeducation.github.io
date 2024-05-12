@@ -132,10 +132,9 @@
 		<form id="reservations" action="https://getform.io/f/0f7eb169-4025-4982-bcd9-870d3556430c" method="post" style="margin:0; padding:0; text-align:center;">
 			<input type="text" id="name" name="Name" placeholder="Name *" class="formQ" required>            
 			<input type="email" id="email" name="Email" placeholder="Email *" class="formQ" required>
-			<input type="tel" id="phone" name="Phone" placeholder="Phone" class="formQ">
 
 			<div class="flex-container" style="margin-bottom:1.5rem;">
-				<div style="width:64%;"><input id="city" autocomplete="home city" name="City" placeholder="City" class="formInline"></div>  
+				<div style="width:64%;"><input type="tel" id="phone" name="Phone" placeholder="Phone" class="formInline"></div>  
 				<div style="width:1%;"></div>
 				<div style="width:35%;"><input type="tel" autocomplete="postal-code" id="zip" pattern="[0-9]{5}" name="ZIP" placeholder="Zip *" min="93101" max="93117" step="1" class="formInline" required></div>
 			</div>
