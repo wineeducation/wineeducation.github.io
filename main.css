@@ -186,7 +186,7 @@ button:hover{
 
 #nameLogo {
   display: block;
-  margin: 0 auto 1.5rem auto;
+  margin: 0 auto 3rem auto;
   
   width:min(70vw, 30rem);
 }
