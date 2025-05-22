@@ -270,7 +270,7 @@ button:hover{
     overflow:hidden;
   
     height:100%;
-    width:min(100vw, 25rem);
+    width:min(100vw, 30rem);
 
     margin:0;
     padding:0;
@@ -382,18 +382,18 @@ select {
 
   padding:.2rem .2rem .2rem 1rem;
   
-  font-size:1.2rem;
+  font-size:1.1rem;
   font-variant:small-caps;
 
   overflow:hidden;
 }
 
 input[type="date"]{
-  font-size:1.2rem; 
+  font-size:1.1rem; 
   margin:0 0 1px 0;
 }
 input[type="time"]{
-  font-size: 1.2rem; 
+  font-size: 1.1rem; 
   margin: 0 0 1px 0;
 }
 
@@ -437,7 +437,7 @@ input::-webkit-inner-spin-button {
 
   border:.1rem solid;
   border-radius:5px;
-  font-size:1.2rem;
+  font-size:1.1rem;
 }
 
 #phoneNumber{
