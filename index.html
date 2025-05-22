@@ -83,7 +83,7 @@
 		</p>
 		<button type="button" class="button" style="margin-bottom:1.5rem;" onclick="showModal('InHomeModal')">In-Home Tastings</button>
 		<button type="button" class="button" style="margin-bottom:1.5rem;" onclick="showModal('TastingRoomModal')">Tasting Room Events</button>
-                <button type="button" class="button" style="margin-top:0; margin-bottom:1.5rem;" onclick="showModal('ReservationsModal')">Reservations</button>
+                <button type="button" class="button" style="margin-top:0; margin-bottom:1.5rem;" onclick="showModal('ContactModal')">Contact</button>
 		
 		<div style="display:block;">
 			<img src="images/logo.svg" id="logo" style="width: 7.5rem;  margin:3rem auto;">
@@ -163,14 +163,14 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->
 	
-	<div id="ReservationsModal" class="modal hidden">
+	<div id="ContactModal" class="modal hidden">
 		
 	<div class="modalContainer">
-		<p class="title">Reservations</p>
+		<p class="title">Contact</p>
 		
 	<div class="modalBody" style="justify-content:center; align-items:center; overflow:hidden;">
 		
-		<form id="reservations" action="https://getform.io/f/0f7eb169-4025-4982-bcd9-870d3556430c" method="post" style="margin:0; padding:0; text-align:center;">
+		<form id="contact" action="https://getform.io/f/0f7eb169-4025-4982-bcd9-870d3556430c" method="post" style="margin:0; padding:0; text-align:center;">
 			<input type="text" id="name" name="Name" placeholder="Name *" class="formQ" required>            
 			<input type="email" id="email" name="Email" placeholder="Email *" class="formQ" required>
 
@@ -196,10 +196,10 @@
 				<option value="coroporate/winery">corporate/winery</option>
 			</select>
 -->  
-			<textarea id="details" name="Details" class="formQ" style="margin-bottom:1.5rem; padding-bottom:.4rem; resize:none;" rows="5" placeholder="desired dates and times, wine theme, and other details and preferences"></textarea>
+			<textarea id="details" name="Details" class="formQ" style="margin-bottom:1.5rem; padding-bottom:.4rem; resize:none;" rows="5" placeholder="questions, reservation request details, etc."></textarea>
 			
 			<div style="padding:0; margin-bottom:0;">
-				<button type="submit" class="button" style="font-weight:300;">REQUEST</button>
+				<button type="submit" class="button" style="font-weight:300;">Submit</button>
 			</div>
 		</form>
 		
@@ -209,7 +209,7 @@
 		
 	</div>
 		
-		<svg class="close" viewBox="0 0 100 100" stroke-width="4" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" onclick="hideModal('ReservationsModal')">
+		<svg class="close" viewBox="0 0 100 100" stroke-width="4" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" onclick="hideModal('ContactModal')">
 	 		<circle cx="50" cy="50" r="45"/>
 			<path d="M55 30 L40 50 L55 70"/>
 		  </svg>
