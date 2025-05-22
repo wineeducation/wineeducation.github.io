@@ -117,15 +117,6 @@ button:hover{
   animation-delay: 1250ms;
 }
 
-.fadeIn2 {
-  opacity:0;
-
-  -webkit-animation: fadeInDown 2000ms ease-in forwards;
-  animation: fadeInDown 2000ms ease-in forwards;
-
-  -webkit-animation-delay: 2500ms;
-  animation-delay: 2500ms;
-}
 
 @keyframes fadeIn {
   0% {
@@ -166,6 +157,20 @@ button:hover{
     transform: translateY(0);
   }
 }
+
+.loadVisible{
+  visibility: visible;
+  opacity: 1;
+  transition: visibility ease-in-out 2000ms, ease-in-out 2000ms;
+  Transition-delay:400ms;
+}
+
+.loadHidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility ease-in 1200ms, opacity 1200ms;
+}
+
 
 .visible {
   visibility: visible;
