@@ -19,6 +19,36 @@
 </head>
 	
 <script>
+	function loadFunctions(){
+		document.getElementById('loadScreenModal').classList.replace('loadHidden', 'loadVisible');
+
+		setTimeout('hideLoadScreen()', 2000);
+		setTimeout('loadBody()', 3000);
+		setTimeout('setTopContentVisibility()', 4000);
+	}
+
+
+	function hideLoadScreen(){
+		document.getElementById('loadScreenModal').classList.replace('loadVisible', 'loadHidden');
+			
+		return;
+	}
+	function loadBody(){
+		document.getElementById('top').classList.replace('loadHidden', 'loadVisible');
+		document.getElementById('content').classList.replace('loadHidden', 'loadVisible');
+
+		return;
+	}
+	function setTopContentVisibility(){
+		document.getElementById('top').classList.replace('loadVisible', 'visible');
+		document.getElementById('content').classList.replace('loadVisible', 'visible');
+
+		document.body.style.overflow = 'auto';
+		document.body.classList.remove('noScroll');
+			
+		return;
+	}
+
 	function showModal(modalID){
 		document.body.style.overflow = 'hidden';
 		document.body.classList.add('noScroll');
@@ -30,12 +60,13 @@
 		return;
 	}
 	function hideModal(modalID){
-		document.body.style.overflow = 'auto';
-		document.body.classList.remove('noScroll');
+		document.getElementById(modalID).classList.replace('visible', 'hidden');
+
 		document.getElementById('top').classList.replace('hidden', 'visible');
 		document.getElementById('content').classList.replace('hidden', 'visible');
-			
-		document.getElementById(modalID).classList.replace('visible', 'hidden');
+
+		document.body.style.overflow = 'auto';
+		document.body.classList.remove('noScroll');
 			
 		return;
 	}
@@ -67,16 +98,17 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->	
 
-<body onload="setDefaultDate()">
-	<div id="top" class="visible">
-			<div style="margin-top:10vh;">
-				<img src="images/name.svg" id="nameLogo" class="fadeIn0">
-				<div id="subheader" class="fadeIn1">SANTA BARBARA</div>
+<body onload="loadFunctions()" style="overflow:hidden;" class="NoScroll">
+
+	<div id="top" class="loadHidden">
+			
+			<div style="margin-top:25vh;">
+				<img src="images/name.svg" id="nameLogo">
+				<div id="subheader">SANTA BARBARA</div>
 			</div>
-			<img src="images/chevron.svg" id="chevron" class="fadeIn2">
 	</div>
 	
-	<div id="content" class="visible">	      
+	<div id="content" class="loadHidden">	      
 		<img src="images/portrait.png" id="portrait">
 		<p id="paragraph">
 			I'm a wine educator empowering others to have confidence in the wine shop, restaurant, and winery.
@@ -220,36 +252,16 @@
 <!--–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->
-
-<!--    
-	<div id="CertificationsModal" class="modal hidden">
+ 
+	<div id="loadScreenModal" class="modal loadHidden">
 		
-	<div class="modalContainer">
-		<p class="title">Certifications</p>
-		
-	<div class="modalBody">	
-		<div style="width:85%;">
-			<b style="font-size:1.3rem;">Wine & Spirits Education Trust</b>
-			<br>
-			&emsp;&emsp;&emsp;Level 3 Award in Wines
-			<br>
-			&emsp;&emsp;&emsp;passed with distinction
-			<br><br>
-			<b style="font-size:1.3rem;">Court of Master Sommeliers</b>
-			<br>
-			&emsp;&emsp;&emsp;Introductory Course
-		        <br><br>
+		<div style="display:block;">
+			<img src="images/logo.svg" id="logo" style="width: 20rem; margin-top: 20vh;">
 		</div>
-	</div>
 		
-		<svg class="close" viewBox="0 0 100 100" stroke-width="4" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" onclick="hideModal('CertificationsModal')">
-	 		<circle cx="50" cy="50" r="45"/>
-			<path d="M55 30 L40 50 L55 70"/>
-		  </svg>
 	
 	</div>	
 	</div>
--->
 
 </body>	
 </html>
