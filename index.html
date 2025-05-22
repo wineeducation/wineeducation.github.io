@@ -30,7 +30,7 @@
 
 	function hideLoadScreen(){
 		document.getElementById('loadScreenModal').classList.replace('loadVisible', 'loadHidden');
-			
+		
 		return;
 	}
 	function loadBody(){
@@ -70,6 +70,7 @@
 			
 		return;
 	}
+<!--	
 	function setDefaultDate(){
 		 date = new Date();
 		 date.setDate(date.getDate() + 7);
@@ -91,7 +92,8 @@
 		 document.getElementById('date').max = maxYear + '-' + String(maxMonth).padStart(2, '0') + '-' + String(day).padStart(2, '0');
 
 		 return year;
-	}
+	} 
+-->
 </script>
 	
 <!--–––––-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -111,8 +113,9 @@
 	<div id="content" class="loadHidden">	      
 		<img src="images/portrait.png" id="portrait">
 		<p id="paragraph">
-			I'm a wine educator empowering others to have confidence in the wine shop, restaurant, and winery.
+			A wine educator empowering others to have confidence in the wine shop, restaurant, and winery.
 		</p>
+		<button type="button" class="button" style="margin-bottom:1.5rem;" onclick="showModal('AboutModal')">About</button>
 		<button type="button" class="button" style="margin-bottom:1.5rem;" onclick="showModal('InHomeModal')">In-Home Events</button>
 		<button type="button" class="button" style="margin-bottom:1.5rem;" onclick="showModal('BusinessModal')">Business Events</button>
                 <button type="button" class="button" style="margin-top:0; margin-bottom:1.5rem;" onclick="showModal('ContactModal')">Contact</button>
@@ -127,10 +130,10 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->	
 	
-	<div id="InHomeModal" class="modal hidden">
+	<div id="AboutModal" class="modal hidden">
 		
 	<div class="modalContainer">
-		<p class="title">In-Home Tastings</p>
+		<p class="title">About</p>
 		
 	<div class="modalBody" style="overflow-y:auto; margin-bottom:7rem;">
 		<div style="width:85%;">
@@ -138,13 +141,42 @@
 			The experience marked me deeply, and it's one I hope to share with you. We should all get to learn about wine the way I did, in our own 
 			space with those we want there with us.
 			<br><br>
-			More than that, I believe the wine industry has failed the consumer, pedagogically speaking. Explicitly and implicitly,
-			we have taught the public to learn and pay attention to things that aren't necessary at the expense of those things that are. I seek to correct that.
+			Later, studying wine formally, I realized that the wine industry has failed the consumer, pedagogically. Instead of focusing on how to taste 
+			and assess wine, give language to those ideas, and to learn to communicate those ideas in a way that makes sense to industry professionals, we 
+			have, explicitly and implicitly, told them that they should memorize wine regions, know what loam is and why it's important, and that they're 
+			inadequate if they can't blind taste wine.
+			<br><br>
+			What keeps people from getting into wine isn't simple snobbery or gatekeeping, but a lack of empowerment. That's what I'm passionate about correcting.
+		</div>
+	</div>
+		
+		<svg class="close" viewBox="0 0 100 100" stroke-width="4" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" onclick="hideModal('InHomeModal')">
+			<circle cx="50" cy="50" r="45"/>
+			<path d="M55 30 L40 50 L55 70"/>
+		  </svg>
+	
+	</div>	
+	</div>
+
+<!--–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->	
+<!--–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->	
+	
+	<div id="InHomeModal" class="modal hidden">
+		
+	<div class="modalContainer">
+		<p class="title">In-Home Tastings</p>
+		
+	<div class="modalBody" style="overflow-y:auto; margin-bottom:7rem;">
+		<div style="width:85%;">
+			A guided wine tasting event in your own home with those you want there with you. Protected from ascot wearing wine snobs asking, "Do I detect a hint of boysenberry?" 
+			You will learn everything you need to know to be self-confident in your own ability... and you'll learn what things are and are not essential.
 			<br><br>
 			This is a bespoke experience, completely customizable to your tastes. There really is nothing else like it. We will discuss your vision for the event 
 			ahead of time, so that you, your friends, and your guests will have a remarkable experience.
-			<br><br>
-			The price is $75 per person, not including wine.
 			<br><br>
 			<div class="sectionHeader">Themes</div>
 			For the wines served during the tasting, here are a few themes I recommend. However, as I've said, this is completely customizable to your preferences.
@@ -213,22 +245,6 @@
 				<div style="width:49%;"><input type="tel" autocomplete="postal-code" id="zip" pattern="[0-9]{5}" name="ZIP" placeholder="Zip *" min="93101" max="93117" step="1" class="formInline" required></div>
 			</div>
 
-<!--			<div class="flex-container" style="margin-bottom:.3rem;">
-				<div style="width:40%;"><input type="date" id="date" name="Date" value="" min="" class="formInline" ></div>
-				<div style="width:20%;"></div>
-				<div style="width:40%;"><input type="time" id="time" name="Time" value="19:00" class="formInline"></div> 
-			</div>
-                   
-			<select name="Attendees" id="attendance" class="formQ" style="margin-bottom:.4rem;">
-				<option value="" disabled selected>Number of Attendees</option>
-				<option value="4 or fewer">four or fewer</option>
-				<option value="5">five</option>
-				<option value="6">six</option>
-				<option value="7">seven</option>
-				<option value="8">eight or more</option>
-				<option value="coroporate/winery">corporate/winery</option>
-			</select>
--->  
 			<textarea id="details" name="Details" class="formQ" style="margin-bottom:1.5rem; padding-bottom:.4rem; resize:none;" rows="5" placeholder="questions, reservation request details, etc."></textarea>
 			
 			<div style="padding:0; margin-bottom:0;">
