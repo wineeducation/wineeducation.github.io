@@ -82,18 +82,13 @@
 			I'm an educator empowering others to understand and assess wine for themselves so they can feel confident in the wine shop, restaurant, and winery.
 		</p>
 		<button type="button" class="button" style="margin-bottom:1.5rem;" onclick="showModal('InHomeModal')">In-Home Tastings</button>
-		<button type="button" class="button" style="margin-bottom:0;" onclick="showModal('TastingRoomModal')">Tasting Room Events</button>
-		<img src="images/divider.svg" style="display:block; width:3rem; margin:2.5rem auto;">
+		<button type="button" class="button" style="margin-bottom:1.5rem;" onclick="showModal('TastingRoomModal')">Tasting Room Events</button>
                 <button type="button" class="button" style="margin-top:0; margin-bottom:1.5rem;" onclick="showModal('ReservationsModal')">Reservations</button>
-		<!--<button type="button" class="button" onclick="showModal('CertificationsModal')">Certifications</button>-->
 		
 		<div style="display:block;">
 			<img src="images/logo.svg" id="logo" style="width: 7.5rem;  margin:3rem auto;">
 		</div>
 
-		<div>
-			<a href="sms:+18052595917" style="text-align:center; margin:0 auto 3rem auto; width:fit-content; display:block; cursor:none;"><img src="images/number.svg" id="phoneNumber" style="display:block; width:12rem;"></a>
-		</div>
 	</div>
 
 <!--–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -185,12 +180,12 @@
 				<div style="width:49%;"><input type="tel" autocomplete="postal-code" id="zip" pattern="[0-9]{5}" name="ZIP" placeholder="Zip *" min="93101" max="93117" step="1" class="formInline" required></div>
 			</div>
 
-			<div class="flex-container" style="margin-bottom:.3rem;">
+<!--			<div class="flex-container" style="margin-bottom:.3rem;">
 				<div style="width:40%;"><input type="date" id="date" name="Date" value="" min="" class="formInline" ></div>
 				<div style="width:20%;"></div>
 				<div style="width:40%;"><input type="time" id="time" name="Time" value="19:00" class="formInline"></div> 
 			</div>
-                     
+                   
 			<select name="Attendees" id="attendance" class="formQ" style="margin-bottom:.4rem;">
 				<option value="" disabled selected>Number of Attendees</option>
 				<option value="4 or fewer">four or fewer</option>
@@ -200,14 +195,18 @@
 				<option value="8">eight or more</option>
 				<option value="coroporate/winery">corporate/winery</option>
 			</select>
-
-			<textarea id="details" name="Details" class="formQ" style="margin-bottom:1.5rem; padding-bottom:.4rem; resize:none;" rows="2" placeholder="details, preferences, selected wine themes, and other information"></textarea>
+-->  
+			<textarea id="details" name="Details" class="formQ" style="margin-bottom:1.5rem; padding-bottom:.4rem; resize:none;" rows="5" placeholder="requested dates, tiems, preferences, selected wine themes, and other information"></textarea>
 			
 			<div style="padding:0; margin-bottom:0;">
 				<button type="submit" class="button" style="font-weight:300;">REQUEST</button>
 			</div>
 		</form>
-
+		
+		<div>
+			<a href="sms:+18052595917" style="text-align:center; margin:0 auto 3rem auto; width:fit-content; display:block; cursor:none;"><img src="images/number.svg" id="phoneNumber" style="display:block; width:12rem;"></a>
+		</div>
+		
 	</div>
 		
 		<svg class="close" viewBox="0 0 100 100" stroke-width="4" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" onclick="hideModal('ReservationsModal')">
