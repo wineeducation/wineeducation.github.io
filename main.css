@@ -96,68 +96,6 @@ button:hover{
 /*–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
-
-.fadeIn0 {
-  opacity:0;
-
-  -webkit-animation: fadeIn 1500ms ease-in forwards;
-  animation: fadeIn linear 1500ms ease-in forwards;
-
-  -webkit-animation-delay: 250ms;
-  animation-delay: 250ms;
-}
-
-.fadeIn1 {
-  opacity:0;
-
-  -webkit-animation: fadeIn 1500ms ease-in forwards;
-  animation: fadeIn 1500ms ease-in forwards;
-
-  -webkit-animation-delay: 1250ms;
-  animation-delay: 1250ms;
-}
-
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-     opacity: 1;
-  }
-}
-
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-15vh);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-15vh);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .loadVisible{
   visibility: visible;
   opacity: 1;
@@ -210,14 +148,6 @@ button:hover{
   font-weight:200;
   text-align:center;
   letter-spacing: .4rem;
-}
-
-#chevron {
-  display: block;
-  margin:auto;
-
-  width:3rem;
-  height:3rem;
 }
 
 /*–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
