@@ -99,7 +99,7 @@ button:hover{
 .loadVisible{
   visibility: visible;
   opacity: 1;
-  transition: visibility ease-in-out 2000ms, ease-in-out 2000ms;
+  transition: visibility ease-in 2000ms, ease-in 2000ms;
   Transition-delay:400ms;
 }
 
