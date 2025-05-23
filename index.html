@@ -19,7 +19,10 @@
 </head>
 	
 <script>
+	let modalName = "";
+
 	function loadFunctions(){
+		document.getElementById('ModalBackground').classList.replace('loadHidden', 'loadVisible');
 		document.getElementById('loadScreenModal').classList.replace('loadHidden', 'loadVisible');
 
 		setTimeout('hideLoadScreen()', 2250);
@@ -30,6 +33,7 @@
 
 	function hideLoadScreen(){
 		document.getElementById('loadScreenModal').classList.replace('loadVisible', 'loadHidden');
+		document.getElementById('ModalBackground').classList.replace('loadVisible', 'loadHidden');
 		
 		return;
 	}
@@ -40,6 +44,8 @@
 		return;
 	}
 	function setTopContentVisibility(){
+		document.getElementById('ModalBackground').classList.replace('loadHidden', 'hidden');
+		document.getElementById('backButton').classList.remove('hidden');
 		document.getElementById('top').classList.replace('loadVisible', 'visible');
 		document.getElementById('content').classList.replace('loadVisible', 'visible');
 
@@ -50,17 +56,21 @@
 	}
 
 	function showModal(modalID){
+		modalName = modalID;
+
 		document.body.style.overflow = 'hidden';
 		document.body.classList.add('noScroll');
 		document.getElementById('top').classList.replace('visible', 'hidden');
 		document.getElementById('content').classList.replace('visible', 'hidden');
 			
+		document.getElementById('ModalBackground').classList.replace('hidden', 'visible');
 		document.getElementById(modalID).classList.replace('hidden', 'visible');
 			
 		return;
 	}
-	function hideModal(modalID){
-		document.getElementById(modalID).classList.replace('visible', 'hidden');
+	function hideModal(){
+		document.getElementById(modalName).classList.replace('visible', 'hidden');
+		document.getElementById('ModalBackground').classList.replace('visible', 'hidden');
 
 		document.getElementById('top').classList.replace('hidden', 'visible');
 		document.getElementById('content').classList.replace('hidden', 'visible');
@@ -68,6 +78,8 @@
 		document.body.style.overflow = 'auto';
 		document.body.classList.remove('noScroll');
 			
+		modalName = "";
+
 		return;
 	}
 /*
@@ -128,9 +140,9 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->	
 	
-	<div id="AboutModal" class="modal hidden">
+<div id="ModalBackground" class="modal loadHidden">
 		
-	<div class="modalContainer">
+	<div id="AboutModal" class="modalContainer hidden">
 		<p class="title">About</p>
 		
 	<div class="modalBody" style="overflow-y:auto; margin-bottom:7rem;">
@@ -151,24 +163,12 @@
 		</div>
 	</div>
 		
-		<svg class="close" viewBox="0 0 100 100" stroke-width="4" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" onclick="hideModal('AboutModal')">
-			<circle cx="50" cy="50" r="45"/>
-			<path d="M55 30 L40 50 L55 70"/>
-		  </svg>
 	
 	</div>	
-	</div>
 
-<!--–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->	
-<!--–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->	
-	
-	<div id="InHomeModal" class="modal hidden">
+
 		
-	<div class="modalContainer">
+	<div id="InHomeModal" class="modalContainer hidden">
 		<p class="title">In-Home Tastings</p>
 		
 	<div class="modalBody" style="overflow-y:auto; margin-bottom:7rem;">
@@ -192,21 +192,13 @@
 		</div>
 	</div>
 		
-		<svg class="close" viewBox="0 0 100 100" stroke-width="4" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" onclick="hideModal('InHomeModal')">
-			<circle cx="50" cy="50" r="45"/>
-			<path d="M55 30 L40 50 L55 70"/>
-		  </svg>
 	
 	</div>	
-	</div>
 
-<!--–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->
 
-	<div id="BusinessModal" class="modal hidden">
+
 		
-	<div class="modalContainer">
+	<div id="BusinessModal" class="modalContainer hidden">
 		<p class="title">Events & Trainings</p>
 		
 	<div class="modalBody">
@@ -217,21 +209,11 @@
 		</div>
 	</div>
 		
-		<svg class="close" viewBox="0 0 100 100" stroke-width="4" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" onclick="hideModal('BusinessModal')">
-	 		<circle cx="50" cy="50" r="45"/>
-			<path d="M55 30 L40 50 L55 70"/>
-		  </svg>
 	
 	</div>	
-	</div>
 
-<!--––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->
-	
-	<div id="ContactModal" class="modal hidden">
 		
-	<div class="modalContainer">
+	<div id="ContactModal" class="modalContainer hidden">
 		<p class="title">Contact</p>
 		
 	<div class="modalBody" style="justify-content:center; align-items:center; overflow:hidden;">
@@ -259,26 +241,21 @@
 		
 	</div>
 		
-		<svg class="close" viewBox="0 0 100 100" stroke-width="4" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" onclick="hideModal('ContactModal')">
+
+	</div>	
+
+
+		<svg id="backButton" class="close hidden" viewBox="0 0 100 100" stroke-width="4" stroke-linecap="round" xmlns="http://www.w3.org/2000/			svg" onclick="hideModal()">
 	 		<circle cx="50" cy="50" r="45"/>
 			<path d="M55 30 L40 50 L55 70"/>
 		  </svg>
-	</div>	
-	</div>
-
-<!--–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->
- 
-	<div id="loadScreenModal" class="modal loadHidden">
 		
-		<div style="display:block;">
+		<div id="loadScreenModal" class="modalContainer loadHidden" style="display:block;">
 			<img src="images/logo.svg" id="logo" style="width: min(60vw, 20rem); margin-top: min(20vh, 10rem);">
 		</div>
 		
 	
-	</div>	
-	</div>
+</div>	
 
 </body>	
 </html>
