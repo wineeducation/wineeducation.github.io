@@ -30,7 +30,6 @@
 		setTimeout('setTopContentVisibility()', 4250);
 	}
 
-
 	function hideLoadScreen(){
 		document.getElementById('loadScreenModal').classList.replace('loadVisible', 'loadHidden');
 		document.getElementById('ModalBackground').classList.replace('loadVisible', 'loadHidden');
@@ -167,7 +166,7 @@
 	</div>	
 
 
-		
+<!-- In-Home Modal -->		
 	<div id="InHomeModal" class="modalContainer hidden">
 		<p class="title">In-Home Tastings</p>
 		
@@ -195,9 +194,7 @@
 	
 	</div>	
 
-
-
-		
+<!-- Buisness Modal -->	
 	<div id="BusinessModal" class="modalContainer hidden">
 		<p class="title">Events & Trainings</p>
 		
@@ -212,7 +209,7 @@
 	
 	</div>	
 
-		
+<!-- Contact Modal -->	
 	<div id="ContactModal" class="modalContainer hidden">
 		<p class="title">Contact</p>
 		
@@ -244,15 +241,16 @@
 
 	</div>	
 
+<!-- Back Button -->
+	<svg id="backButton" class="close hidden" viewBox="0 0 100 100" stroke-width="4" stroke-linecap="round" xmlns="http://www.w3.org/2000/			svg" onclick="hideModal()">
+	  <circle cx="50" cy="50" r="45"/>
+	  <path d="M55 30 L40 50 L55 70"/>
+	</svg>
 
-		<svg id="backButton" class="close hidden" viewBox="0 0 100 100" stroke-width="4" stroke-linecap="round" xmlns="http://www.w3.org/2000/			svg" onclick="hideModal()">
-	 		<circle cx="50" cy="50" r="45"/>
-			<path d="M55 30 L40 50 L55 70"/>
-		  </svg>
-		
-		<div id="loadScreenModal" class="modalContainer loadHidden" style="display:block;">
-			<img src="images/logo.svg" id="logo" style="width: min(60vw, 20rem); margin-top: min(20vh, 10rem);">
-		</div>
+<!-- Load Screen Modal -->
+	<div id="loadScreenModal" class="modalContainer loadHidden" style="display:block;">
+	  <img src="images/logo.svg" id="logo" style="width: min(60vw, 20rem); margin-top: min(20vh, 10rem);">
+	</div>
 		
 	
 </div>	
