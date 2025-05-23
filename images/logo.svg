@@ -2,19 +2,19 @@
 
 <!-- Grapes -->
 
-	<circle cx="84" cy="136" r="20"/>
+	<circle cx="87" cy="139" r="18"/>
 
-	<circle cx="75" cy="110" r="20"/>
-	<circle cx="105" cy="120" r="20"/>
+	<circle cx="76" cy="116" r="18"/>
+	<circle cx="106" cy="120" r="18"/>
 
-	<circle cx="65" cy="87" r="20"/>
-	<circle cx="120" cy="95" r="20"/>
-	<circle cx="95" cy="94" r="20"/>
+	<circle cx="65" cy="90" r="19"/>
+	<circle cx="121" cy="96" r="19"/>
+	<circle cx="95" cy="97" r="19"/>
 	
-	<circle cx="90" cy="56" r="20"/>
-	<circle cx="68" cy="57" r="20"/>
-	<circle cx="112" cy="59" r="20"/>
-	<circle cx="127" cy="61" r="20"/>
+	<circle cx="89" cy="56" r="18"/>
+	<circle cx="68" cy="58" r="19"/>
+	<circle cx="109" cy="59" r="18"/>
+	<circle cx="126" cy="62" r="19"/>
 
 <!-- Stem -->
 
@@ -23,7 +23,7 @@
 
 <!-- Grapes -->
 
-	<circle cx="51" cy="60" r="20"/>
+	<circle cx="51" cy="62" r="20"/>
 	<circle cx="78" cy="70" r="20"/>
 	<circle cx="138" cy="69" r="20"/>
 	<circle cx="111" cy="72" r="20"/>
