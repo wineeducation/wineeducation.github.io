@@ -2,30 +2,30 @@
 
 <!-- Grapes -->
 
-	<circle cx="87" cy="139" r="18"/>
+	<circle cx="84" cy="140" r="18"/>
 
-	<circle cx="76" cy="116" r="18"/>
-	<circle cx="106" cy="120" r="18"/>
+	<circle cx="74" cy="118" r="18"/>
+	<circle cx="104" cy="122" r="18"/>
 
-	<circle cx="65" cy="90" r="19"/>
-	<circle cx="121" cy="96" r="19"/>
-	<circle cx="95" cy="97" r="19"/>
+	<circle cx="64" cy="92" r="19"/>
+	<circle cx="121" cy="98" r="19"/>
+	<circle cx="94" cy="100" r="19"/>
 	
-	<circle cx="89" cy="56" r="18"/>
-	<circle cx="68" cy="58" r="19"/>
-	<circle cx="109" cy="59" r="18"/>
-	<circle cx="126" cy="62" r="19"/>
+	<circle cx="84" cy="60" r="17"/>
+	<circle cx="65" cy="60" r="18"/>
+	<circle cx="106" cy="59" r="14"/>
+	<circle cx="123" cy="65" r="18"/>
 
 <!-- Stem -->
 
-	<path fill="none" stroke-width="14" d="M 96 60 Q 98 30 131 20 "/>
-	<path class="opposite" fill="none" stroke="#E9DCC9" stroke-width="10" d="M 96 60 Q 98 30 131 20 "/>
+	<path fill="none" stroke-width="14" d="M 94 60 Q 96 32 116 22 "/>
+	<path class="opposite" fill="none" stroke="#E9DCC9" stroke-width="10" d="M 94 60 Q 96 32 116 22 "/>
 
 <!-- Grapes -->
 
-	<circle cx="51" cy="62" r="20"/>
-	<circle cx="78" cy="70" r="20"/>
-	<circle cx="138" cy="69" r="20"/>
-	<circle cx="111" cy="72" r="20"/>
+	<circle cx="51" cy="63" r="20"/>
+	<circle cx="74" cy="73" r="20"/>
+	<circle cx="136" cy="70" r="20"/>
+	<circle cx="106" cy="77" r="20"/>
 
 </svg>
