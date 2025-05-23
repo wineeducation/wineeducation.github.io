@@ -1,5 +1,7 @@
 <svg width="188" height="188" viewBox="0 0 188 188" stroke="#030112" fill="#E9DCC9" stroke-linecap="round" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+
 <!-- Grapes -->
+
 	<circle cx="84" cy="136" r="20"/>
 
 	<circle cx="75" cy="110" r="20"/>
@@ -9,13 +11,17 @@
 	<circle cx="120" cy="95" r="20"/>
 	<circle cx="95" cy="94" r="20"/>
 	
-	<circle cx="92" cy="50" r="20"/>
-	<circle cx="67" cy="52" r="20"/>
-	<circle cx="113" cy="53" r="20"/>
-	<circle cx="129" cy="59" r="20"/>
+	<circle cx="90" cy="56" r="20"/>
+	<circle cx="68" cy="57" r="20"/>
+	<circle cx="112" cy="59" r="20"/>
+	<circle cx="127" cy="61" r="20"/>
+
+<!-- Stem -->
 
 	<path fill="none" stroke-width="14" d="M 96 60 Q 98 30 131 20 "/>
 	<path class="opposite" fill="none" stroke="#E9DCC9" stroke-width="10" d="M 96 60 Q 98 30 131 20 "/>
+
+<!-- Grapes -->
 
 	<circle cx="51" cy="60" r="20"/>
 	<circle cx="78" cy="70" r="20"/>
