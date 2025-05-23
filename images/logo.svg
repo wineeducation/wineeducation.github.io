@@ -2,19 +2,19 @@
 
 <!-- Grapes -->
 
-	<circle cx="84" cy="140" r="18"/>
+	<circle cx="84" cy="140" r="17"/>
 
-	<circle cx="74" cy="118" r="18"/>
-	<circle cx="104" cy="122" r="18"/>
+	<circle cx="74" cy="118" r="17"/>
+	<circle cx="104" cy="122" r="17"/>
 
-	<circle cx="64" cy="92" r="19"/>
-	<circle cx="121" cy="98" r="19"/>
+	<circle cx="65" cy="92" r="18"/>
+	<circle cx="119" cy="97" r="18"/>
 	<circle cx="94" cy="100" r="19"/>
 	
-	<circle cx="84" cy="60" r="17"/>
-	<circle cx="65" cy="60" r="18"/>
-	<circle cx="106" cy="59" r="14"/>
-	<circle cx="123" cy="65" r="18"/>
+	<circle cx="84" cy="60" r="16"/>
+	<circle cx="67" cy="60" r="17"/>
+	<circle cx="106" cy="60" r="14"/>
+	<circle cx="121" cy="65" r="17"/>
 
 <!-- Stem -->
 
@@ -23,9 +23,9 @@
 
 <!-- Grapes -->
 
-	<circle cx="51" cy="63" r="20"/>
-	<circle cx="74" cy="73" r="20"/>
-	<circle cx="136" cy="70" r="20"/>
+	<circle cx="51" cy="63" r="18"/>
+	<circle cx="74" cy="73" r="19"/>
+	<circle cx="132" cy="70" r="18"/>
 	<circle cx="106" cy="77" r="20"/>
 
 </svg>
