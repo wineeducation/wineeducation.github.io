@@ -9,17 +9,17 @@
 	<circle cx="120" cy="95" r="20"/>
 	<circle cx="95" cy="94" r="20"/>
 	
-	<circle cx="88" cy="48" r="20"/>
-	<circle cx="63" cy="52" r="20"/>
-	<circle cx="115" cy="53" r="20"/>
-	<circle cx="131" cy="58" r="20"/>
+	<circle cx="92" cy="50" r="20"/>
+	<circle cx="67" cy="52" r="20"/>
+	<circle cx="113" cy="53" r="20"/>
+	<circle cx="129" cy="59" r="20"/>
 
-	<path fill="none" stroke-width="14" d="M 93 60 Q 98 30 128 20 "/>
-	<path class="opposite" fill="none" stroke="#E9DCC9" stroke-width="10" d="M 93 60 Q 98 30 128 20 "/>
+	<path fill="none" stroke-width="14" d="M 96 60 Q 98 30 131 20 "/>
+	<path class="opposite" fill="none" stroke="#E9DCC9" stroke-width="10" d="M 96 60 Q 98 30 131 20 "/>
 
 	<circle cx="51" cy="60" r="20"/>
 	<circle cx="78" cy="70" r="20"/>
-	<circle cx="137" cy="68" r="20"/>
-	<circle cx="110" cy="72" r="20"/>
+	<circle cx="140" cy="68" r="20"/>
+	<circle cx="111" cy="72" r="20"/>
 
 </svg>
