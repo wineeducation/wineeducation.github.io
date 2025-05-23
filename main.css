@@ -14,7 +14,6 @@ body {
    -ms-touch-action: none;
 }
 
-
 /* --- Universal Defaults --- */
 
 * {
@@ -99,14 +98,14 @@ button:hover{
 .loadVisible{
   visibility: visible;
   opacity: 1;
-  transition: visibility ease-in 2000ms, ease-in 2000ms;
+  transition: visibility ease-in 2000ms, opacity 2000ms;
   Transition-delay:400ms;
 }
 
 .loadHidden {
   visibility: hidden;
   opacity: 0;
-  transition: visibility ease-in 1200ms, opacity 1200ms;
+  transition: visibility ease-in 2000ms, opacity 2000ms;
 }
 
 
