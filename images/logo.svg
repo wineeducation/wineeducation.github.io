@@ -11,21 +11,21 @@
 	<circle cx="119" cy="97" r="18"/>
 	<circle cx="94" cy="100" r="19"/>
 	
-	<circle cx="84" cy="60" r="16"/>
-	<circle cx="67" cy="60" r="17"/>
-	<circle cx="106" cy="60" r="14"/>
-	<circle cx="121" cy="65" r="17"/>
+	<circle cx="85" cy="60" r="16"/>
+	<circle cx="67" cy="61" r="16"/>
+	<circle cx="104" cy="59" r="13"/>
+	<circle cx="120" cy="65" r="17"/>
 
 <!-- Stem -->
 
-	<path fill="none" stroke-width="14" d="M 94 60 Q 96 32 116 22 "/>
-	<path class="opposite" fill="none" stroke="#E9DCC9" stroke-width="10" d="M 94 60 Q 96 32 116 22 "/>
+	<path fill="none" stroke-width="14" d="M 92 60 Q 96 34 116 24 "/>
+	<path class="opposite" fill="none" stroke="#E9DCC9" stroke-width="10" d="M 92 60 Q 96 34 116 24 "/>
 
 <!-- Grapes -->
 
-	<circle cx="51" cy="63" r="18"/>
-	<circle cx="74" cy="73" r="19"/>
-	<circle cx="132" cy="70" r="18"/>
-	<circle cx="106" cy="77" r="20"/>
+	<circle cx="51" cy="66" r="18"/>
+	<circle cx="73" cy="74" r="19"/>
+	<circle cx="130" cy="70" r="18"/>
+	<circle cx="104" cy="77" r="20"/>
 
 </svg>
