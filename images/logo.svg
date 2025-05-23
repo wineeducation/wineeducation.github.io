@@ -19,7 +19,7 @@
 <!-- Stem -->
 
 	<path fill="none" stroke-width="14" d="M 92 60 Q 96 34 116 24 "/>
-	<path class="opposite" fill="none" stroke="#E9DCC9" stroke-width="10" d="M 92 60 Q 96 34 116 24 "/>
+	<path class="opposite" fill="none" stroke="#E9DCC9" stroke-width="12" d="M 92 60 Q 96 34 116 24 "/>
 
 <!-- Grapes -->
 
