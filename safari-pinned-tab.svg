@@ -1,12 +1,8 @@
-<svg width="188" height="188" viewBox="0 0 188 188" stroke="#030112" fill="#E9DCC9" stroke-linecap="round" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+<svg width="188" height="188" viewBox="0 0 188 188" stroke="#030112" fill="#E9DCC9" stroke-linecap="round" stroke-width="1" xmlns="http://www.w3.org/2000/svg">
 
 <!-- Background -->
 
 	<rect x="1" y="1" width="186" height="186" rx="25" fill="#E9DCC9" stroke="none" />
-
-<!-- Grapes -->
-
-	<svg width="188" height="188" viewBox="0 0 188 188" stroke="#030112" fill="#E9DCC9" stroke-linecap="round" stroke-width="1" xmlns="http://www.w3.org/2000/svg">
 
 <!-- Grapes -->
 
@@ -35,10 +31,5 @@
 	<circle cx="76" cy="74" r="19"/>
 	<circle cx="133" cy="72" r="18"/>
 	<circle cx="106" cy="77" r="19.5"/>
-
-</svg>
-
-  
-
 
 </svg>
