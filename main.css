@@ -1,0 +1,385 @@
+/* --- Background --- */
+
+body {
+  background-color:#E9DCC9;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height:100%;
+  overflow:auto;
+  -webkit-overflow-scrolling: touch;
+  }
+
+.noScroll{
+   touch-action: none;
+   -ms-touch-action: none;
+}
+
+/* --- Universal Defaults --- */
+
+* {
+  scroll-behavior: smooth;
+  font-family: Quicksand;
+  color:#030112;
+  background-color:#E9DCC9;
+  cursor:default;
+
+  touch-action: pan-y;
+  -ms-touch-action: pan-y;
+  
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+#top, #nameLogo, #subheader, #chevron, #paragraph, #portrait, #logo, .title  {
+  pointer-events: none;
+  touch-action: none;
+  -ms-touch-action: none;   
+}
+
+textarea, select, input, button { 
+  outline: none;
+}
+
+*::-webkit-scrollbar {
+  display:none;
+}
+
+b {
+  font-weight:400;
+}
+
+div {
+  margin:0 auto;
+  padding:0;
+}
+
+textarea, input {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+svg{
+  background: transparent;
+}
+
+button {
+  display:block;
+  margin:0 auto;
+  padding:1px;
+  
+  width:fit-content;
+  height:fit-content;
+  transition-duration:0.6s;
+
+  background-color: transparent;
+  border:none;
+
+  font-size:1.7rem;
+  font-weight:300;
+  font-variant:small-caps;
+  letter-spacing:.1rem;
+  text-align: center;
+}
+
+button:hover{
+  transform: scale(1.1);
+  transition-duration:0.6s;
+}
+
+/*–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.loadVisible{
+  visibility: visible;
+  opacity: 1;
+  transition: visibility ease-in 2000ms, opacity 2000ms;
+  Transition-delay:400ms;
+}
+
+.loadHidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility ease-in 2000ms, opacity 2000ms;
+}
+
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility ease-out 800ms, opacity 800ms;
+  transition-delay:800ms;
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility ease-in 800ms, opacity 800ms;
+}
+
+/*–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+#top {
+  height:100vh;
+  display:flex;
+  flex-flow:column;
+}
+
+#nameLogo {
+  display: block;
+  margin: 0 auto 3rem auto;
+  
+  width:min(70vw, 30rem);
+}
+
+#subheader {
+  padding:0;
+  margin:0;
+  
+  font-size: 1.1rem;
+  line-height:2rem;
+  font-weight:200;
+  text-align:center;
+  letter-spacing: .4rem;
+}
+
+/*–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+/* --- Body --- */
+#paragraph {
+  margin: 0 auto 3rem auto;
+  padding: .1rem;
+  text-align:left;
+  
+  font-size:1rem;
+  font-weight:400;
+  line-height:1.5rem;
+
+  width:min(80vw, 30em);
+  
+  overflow:hidden;
+}
+
+#portrait{
+  display:block;
+  width:min(80vw, 30rem);
+  margin:0 auto 3rem auto;
+  border-radius:25px;
+}
+
+#logo {
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  
+  width:min(90vw, 30rem);
+}
+
+/*–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+/* --- Modal --- */
+.modal {
+  position: fixed;
+  height:100%;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+
+  overflow:hidden;
+  z-index:99;
+}
+
+.modalContainer {
+    display:flex;
+    flex-flow:column;
+    overflow:hidden;
+  
+    height:100%;
+    width:min(100vw, 30rem);
+
+    margin:0;
+    padding:0;
+    border:none;
+
+    position:absolute;    
+    left:50%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  
+}
+
+.title {
+  display:block;
+  margin: 2rem auto 1rem auto;
+
+  font-size: 2.5rem;
+  font-weight:300;
+  font-variant:small-caps;
+  text-align: center;
+  letter-spacing:.1rem;
+}
+
+.modalBody {
+  Flex:1;
+
+  position:relative;
+  overscroll-behavior: contain;
+
+  margin:0;
+  padding:0 0 1rem 0;
+  width:auto;
+  
+  font-size:1rem;
+  font-weight:400;
+  line-height:1.5rem;
+  
+  overflow-y:hidden;
+  overflow-x:hidden;
+}
+
+.sectionHeader {
+  
+  margin:1.5rem auto 1rem auto;
+  text-align:center;
+  font-size:1.8rem;
+  font-weight:300;
+  line-height:2rem;
+}
+
+.close{
+  width:3rem;
+  height:3rem;
+
+  position:absolute;
+  left:50%;
+  bottom:3rem;
+
+  z-index:100;
+  -webkit-transform: translate3d(-50%,0,1px);
+  transform: translate3d(-50%,0,1px);
+
+  stroke:#03011290;
+  fill:none;
+  transition-duration:0.6s;
+}
+
+.close:hover{
+  fill:none;
+
+  -webkit-transform: translate3d(-50%,0,1px) scale(1.1);
+  transform: translate3d(-50%,0,1px) scale(1.1);
+  
+  transition-duration:0.6s;
+}
+
+/*–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+/* --- Reservation Form Elements --- */
+input::placeholder {
+    opacity: .6;
+    color: darkslategrey;
+}
+textarea::placeholder{
+    opacity: .6;
+    color: darkslategrey;
+}
+
+select {
+  -webkit-appearance:none;
+  box-shadow:none !important;
+  box-sizing: border-box;
+  
+  background: url("images/dropdownarrow.svg") no-repeat right 1rem center;
+  background-size: .6rem .3rem;
+}
+
+.formQ {
+  display:block;
+  margin: 0 auto .4rem auto;
+  
+  width: 80%;
+  height: auto;
+
+  border-radius:5px;
+  border:.1rem solid;
+
+  padding:.2rem .2rem .2rem 1rem;
+  
+  font-size:1.1rem;
+  font-variant:small-caps;
+
+  overflow:hidden;
+}
+
+input[type="date"]{
+  font-size:1.1rem; 
+  margin:0 0 1px 0;
+}
+input[type="time"]{
+  font-size: 1.1rem; 
+  margin: 0 0 1px 0;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+input::-webkit-date-and-time-value{
+  text-align:left;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.flex-container{
+  margin: 0 auto .3rem auto;
+  
+  height:auto;
+  width:80%;
+  
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+}
+
+.formInline {
+  width:100%;
+  padding:.2rem .2rem .2rem 1rem;
+
+  background-color:transparent;
+  background-repeat:no-repeat;
+  
+  font-variant:small-caps;
+  text-align:left;
+
+  border:.1rem solid;
+  border-radius:5px;
+  font-size:1.1rem;
+}
+
+#phoneNumber{
+  transition-duration:0.6s;
+}
+
+
+#phoneNumber:hover{
+  transform: scale(1.1);
+  transition-duration:0.6s;
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+         <META NAME="robots" CONTENT="noindex, nofollow">
+         <title>Wine Education</title>
+           
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+         
+         <link rel="stylesheet" type="text/css" href="main.css">
+         <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400,500' rel='stylesheet' type='text/css'>
+
+         <link rel="shortcut icon" href="favicon.ico"> 
+	 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+         <link rel="mask-icon" href="safari-pinned-tab.svg">
+         <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	 <link rel="shortcut icon" href="favicon.ico" sizes="any">
+</head>
+	
+<script>
+	let modalName = "";
+
+	function loadFunctions(){
+		document.getElementById('ModalBackground').classList.replace('loadHidden', 'loadVisible');
+		document.getElementById('loadScreenModal').classList.replace('loadHidden', 'loadVisible');
+
+		setTimeout('hideLoadScreen()', 2250);
+		setTimeout('loadBody()', 3250);
+		setTimeout('setTopContentVisibility()', 4250);
+	}
+
+	function hideLoadScreen(){
+		document.getElementById('loadScreenModal').classList.replace('loadVisible', 'loadHidden');
+		document.getElementById('ModalBackground').classList.replace('loadVisible', 'loadHidden');
+		
+		return;
+	}
+	function loadBody(){
+		document.getElementById('top').classList.replace('loadHidden', 'loadVisible');
+		document.getElementById('content').classList.replace('loadHidden', 'loadVisible');
+
+		return;
+	}
+	function setTopContentVisibility(){
+		document.getElementById('ModalBackground').classList.replace('loadHidden', 'hidden');
+		document.getElementById('backButton').classList.remove('hidden');
+		document.getElementById('top').classList.replace('loadVisible', 'visible');
+		document.getElementById('content').classList.replace('loadVisible', 'visible');
+
+		document.body.style.overflow = 'auto';
+		document.body.classList.remove('noScroll');
+			
+		return;
+	}
+
+	function showModal(modalID){
+		modalName = modalID;
+
+		document.body.style.overflow = 'hidden';
+		document.body.classList.add('noScroll');
+		document.getElementById('top').classList.replace('visible', 'hidden');
+		document.getElementById('content').classList.replace('visible', 'hidden');
+			
+		document.getElementById('ModalBackground').classList.replace('hidden', 'visible');
+		document.getElementById(modalID).classList.replace('hidden', 'visible');
+			
+		return;
+	}
+	function hideModal(){
+		document.getElementById(modalName).classList.replace('visible', 'hidden');
+		document.getElementById('ModalBackground').classList.replace('visible', 'hidden');
+
+		document.getElementById('top').classList.replace('hidden', 'visible');
+		document.getElementById('content').classList.replace('hidden', 'visible');
+
+		document.body.style.overflow = 'auto';
+		document.body.classList.remove('noScroll');
+			
+		modalName = "";
+
+		return;
+	}
+
+/*	function setDefaultDate(){
+		 date = new Date();
+		 date.setDate(date.getDate() + 7);
+		
+		 year = date.getFullYear();
+		 month = date.getMonth()+1;
+		 day = date.getDate();
+
+		 maxMonth = month+4;
+		 maxYear = year;
+
+		 if (maxMonth > 12){
+		     maxMonth -= 12;	 
+		     maxYear++;
+		 }   
+			 
+		 document.getElementById('date').value = year + '-' + String(month).padStart(2, '0') + '-' + String(day).padStart(2, '0');
+		 document.getElementById('date').min = year + '-' + String(month).padStart(2, '0') + '-' + String(day).padStart(2, '0');
+		 document.getElementById('date').max = maxYear + '-' + String(maxMonth).padStart(2, '0') + '-' + String(day).padStart(2, '0');
+
+		 return year;
+	} */
+</script>
+	
+<!--–––––-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->	
+
+<body onload="loadFunctions()" style="overflow:hidden;" class="NoScroll">
+
+	<div id="top" class="loadHidden">
+			<div style="margin-top: min(25vh, 15rem);">
+				<img src="images/name.svg" id="nameLogo">
+				<div id="subheader">SANTA BARBARA</div>
+			</div>
+	</div>
+	
+	<div id="content" class="loadHidden">	      
+		<img src="images/portrait.png" id="portrait">
+		
+		<p id="paragraph">
+			When I lived in France, a friend of mine would teach me about wine while we sat around the table, cooked meals, and hung out on the patio. 
+			The experience marked me deeply, and it's one I hope to share with you.
+			<br><br>
+			Studying wine formally, I realized the wine industry has 
+			failed the consumer by not having a knowledge base tailored to their needs. This has discouraged a lot of people from getting into wine, 
+			and that's what I've set out to change through my guided wine tasting course.
+			<br><br>
+			In just an hour or two, I teach the essentials and demystify the other stuff so that you can have confidence in yourself at the restaurant and in the winery. 
+			There really is nothing like it anywhere else. Best of all, I come to you. You get to learn about wine in the comfort of your own space with those you want there with you, just like I did.
+			<br><br>
+		</p>
+		
+		<button type="button" class="button" style="margin-bottom:1.5rem;" onclick="showModal('InHomeModal')">In-Home Events</button>
+		<button type="button" class="button" style="margin-bottom:1.5rem;" onclick="showModal('BusinessModal')">Business Events</button>
+                <button type="button" class="button" style="margin-top:0; margin-bottom:1.5rem;" onclick="showModal('ContactModal')">Contact</button>
+		
+		<div style="display:block;">
+			<img src="images/logo.svg" id="logo" style="width: 7.5rem;  margin:3rem auto;">
+		</div>
+
+	</div>
+
+
+<div id="ModalBackground" class="modal loadHidden">
+	
+<!-- In-Home Modal -->		
+	<div id="InHomeModal" class="modalContainer hidden">
+		<p class="title">In-Home Tastings</p>
+		
+		<div class="modalBody" style="overflow-y:auto; margin-bottom:7rem;">
+			<div style="width:85%;">
+				I'm going to be honest with you. This is a passion project, not a business I'm looking to get rich off of. 
+				My current fee is negociable. I charge per person, plus the cost wine. The reason is simple. I think wine 
+				should be for everyone so I'm trying not to price anyone out. You can treat your guests or have each participant pay their own way. 
+				<br><br>
+				I work with you and a local wine shop to choose the bottles for you to pick up. From there, the freedom is yours. 
+				Serve a meal, lounge on the couch, or throw a party. I'll work with you to tailor the event to your vision.
+				<br><br>
+				Fill out a contact form or message me directly to schedule an event or ask questions.
+				<br><br>
+				
+				<div class="sectionHeader">Themes</div>
+					I offer multiple wine themes for the event. I recommend first time participants choose Degustation or The Gamut.
+					<br><br>
+					<b>Degustation</b><br>white and red wines selected to demonstrate the principles of wine tasting<br><br>
+					<b>Chef's Kiss</b><br>wines that pair with a specific cuisine<br><br>
+					<b>The Gamut</b><br>sparkling, white, orange, rosé, red, dessert<br><br>
+					<b>All Business</b><br>wines ordered at steakhouses and seafood restaurants<br><br>
+					<b>Au Naturale</b><br>interesting, weird, and even a little funky<br><br>
+					<b>Showdown</b><br>same grapes, different countries
+					<br><br>
+			</div>	
+	
+		</div>
+	</div>
+
+<!-- Buisness Modal -->	
+	<div id="BusinessModal" class="modalContainer hidden">
+		<p class="title">Events & Trainings</p>
+		
+		<div class="modalBody">
+			<div style="width:85%;">
+				I am also available for work events, restaurant and tasting room events, and service industry staff trainings.
+				<br><br>
+				Please reach out for more information, pricing, and requests.
+			</div>
+		</div>
+		
+	
+	</div>	
+
+<!-- Contact Modal -->	
+	<div id="ContactModal" class="modalContainer hidden">
+		<p class="title">Contact</p>
+		
+		<div class="modalBody" style="justify-content:center; align-items:center; overflow:hidden;">
+		
+			<form id="contact" action="https://getform.io/f/0f7eb169-4025-4982-bcd9-870d3556430c" method="post" style="margin:0; padding:0; text-align:center;">
+				<input type="text" id="name" name="Name" placeholder="Name *" class="formQ" required>            
+				<input type="email" id="email" name="Email" placeholder="Email *" class="formQ" required>
+
+				<div class="flex-container" style="margin-bottom:1rem;">
+					<div style="width:49%;"><input type="tel" id="phone" name="Phone" placeholder="Phone" class="formInline"></div>  
+					<div style="width:2%;"></div>
+					<div style="width:49%;"><input type="tel" autocomplete="postal-code" id="zip" pattern="[0-9]{5}" name="ZIP" placeholder="Zip *" min="93101" max="93117" step="1" class="formInline" required></div>
+				</div>
+
+				<textarea id="details" name="Details" class="formQ" style="margin-bottom:1.5rem; padding-bottom:.4rem; resize:none;" rows="5" placeholder="questions, reservation request details, etc."></textarea>
+			
+				<div style="padding:0; margin-bottom:0;">
+					<button type="submit" class="button" style="font-weight:300;">Submit</button>
+				</div>
+			</form>
+		
+			<div>
+				<a href="sms:+18052595917" style="text-align:center; margin:3rem auto 0 auto; width:fit-content; display:block; cursor:none;"><img src="images/number.svg" id="phoneNumber" style="display:block; width:12rem;"></a>
+			</div>
+		
+		</div>
+		
+
+	</div>	
+
+<!-- Back Button -->
+	<svg id="backButton" class="close hidden" viewBox="0 0 100 100" stroke-width="4" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" onclick="hideModal()">
+	  <circle cx="50" cy="50" r="45"/>
+	  <path d="M55 30 L40 50 L55 70"/>
+	</svg>
+
+<!-- Load Screen Modal -->
+	<div id="loadScreenModal" class="modalContainer loadHidden" style="display:block;">
+	  <img src="images/logo.svg" id="logo" style="width: min(60vw, 20rem); margin-top: min(25vh, 15rem);">
+	</div>
+
+</div>	
+
+</body>	
+</html>

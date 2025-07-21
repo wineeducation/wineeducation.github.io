@@ -1,0 +1,11 @@
+<svg viewBox="0 0 100 50" stroke="#030112" stroke-width="2" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg">
+<!--   <style>
+        @media (prefers-color-scheme: dark) {
+	    line { stroke: #E9DCC990; } 
+        }
+
+    </style>
+-->
+  <line x1="5" y1="5" x2="50" y2="45"/>
+  <line x1="95" y1="5" x2="50" y2="45"/>
+</svg>
