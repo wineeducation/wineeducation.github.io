@@ -261,7 +261,7 @@ button:hover{
 
   position:absolute;
   left:50%;
-  bottom:3rem;
+  bottom:1.5rem;
 
   z-index:100;
   -webkit-transform: translate3d(-50%,0,1px);
