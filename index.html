@@ -134,7 +134,7 @@
 			<br><br>
 		</p>
 		
-		<button type="button" class="button" style="margin-bottom:1.5rem;" onclick="showModal('InHomeModal')">In-Home Events</button>
+		<button type="button" class="button" style="margin-bottom:1.5rem;" onclick="showModal('DetailsModal')">In-Home Events</button>
                 <button type="button" class="button" style="margin-top:0; margin-bottom:1.5rem;" onclick="showModal('ContactModal')">Contact</button>
 		
 		<div style="display:block;">
@@ -147,8 +147,8 @@
 <div id="ModalBackground" class="modal loadHidden">
 	
 <!-- In-Home Modal -->		
-	<div id="InHomeModal" class="modalContainer hidden">
-		<p class="title">In-Home Tastings</p>
+	<div id="DetailsModal" class="modalContainer hidden">
+		<p class="title">Details</p>
 		
 		<div class="modalBody" style="overflow-y:auto; margin-bottom:7rem;">
 			<div style="width:85%;">
@@ -193,7 +193,7 @@
 					<div style="width:49%;"><input type="tel" autocomplete="postal-code" id="zip" pattern="[0-9]{5}" name="ZIP" placeholder="Zip *" min="93101" max="93117" step="1" class="formInline" required></div>
 				</div>
 
-				<textarea id="details" name="Details" class="formQ" style="margin-bottom:1.5rem; padding-bottom:.4rem; resize:none;" rows="5" placeholder="questions, reservation request details, etc."></textarea>
+				<textarea id="details" name="Details" class="formQ" style="margin-bottom:2rem; padding-bottom:.4rem; resize:none;" rows="5" placeholder="questions, reservation request details, etc."></textarea>
 			
 				<div style="padding:0; margin-bottom:0;">
 					<button type="submit" class="button" style="font-size:1.9rem;">Submit</button>
@@ -201,7 +201,7 @@
 			</form>
 		
 			<div>
-				<a href="sms:+18052595917" style="text-align:center; margin:2.5rem auto 0 auto; width:fit-content; display:block; cursor:none;"><img src="images/number.svg" id="phoneNumber" style="display:block; width:12rem;"></a>
+				<a href="sms:+18052595917" style="text-align:center; margin:3rem auto 0 auto; width:fit-content; display:block; cursor:none;"><img src="images/number.svg" id="phoneNumber" style="display:block; width:12rem;"></a>
 			</div>
 		
 		</div>
