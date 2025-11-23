@@ -122,19 +122,10 @@
 		<img src="images/portrait.png" id="portrait">
 		
 		<p id="paragraph">
-			When I lived in France, a friend of mine would teach me about wine while we sat around the table, cooked meals, and hung out on the patio. 
-			The experience marked me deeply, and it's one I hope to share with you.
-			<br><br>
-			Studying wine formally, I realized the wine industry has 
-			failed the consumer by not having a knowledge base tailored to their needs. This has discouraged a lot of people from getting into wine, 
-			and that's what I've set out to change through my guided wine tasting course.
-			<br><br>
-			In just an hour or two, I teach the essentials and demystify the other stuff so that you can have confidence in yourself at the restaurant and in the winery. 
-			There really is nothing like it anywhere else. Best of all, I come to you. You get to learn about wine in the comfort of your own space with those you want there with you, just like I did.
-			<br><br>
+			I teach the essentials that consumers need to know to have confidence in the winery, wine shop, and restaurant.
 		</p>
-		
-		<button type="button" class="button" style="margin-bottom:1.5rem;" onclick="showModal('DetailsModal')">Details</button>
+				<button type="button" class="button" style="margin-bottom:1.5rem;" onclick="showModal('AboutMeModal')">About Me</button>
+				<button type="button" class="button" style="margin-bottom:1.5rem;" onclick="showModal('DetailsModal')">Details</button>
                 <button type="button" class="button" style="margin-top:0; margin-bottom:1.5rem;" onclick="showModal('ContactModal')">Contact</button>
 		
 		<div style="display:block;">
@@ -145,6 +136,26 @@
 
 
 <div id="ModalBackground" class="modal loadHidden">
+
+<!-- About Me Modal -->		
+	<div id="DetailsModal" class="modalContainer hidden">
+		<p class="title">Details</p>
+		
+		<div class="modalBody" style="overflow-y:auto; margin-bottom:7rem;">
+			<div style="width:85%;">
+			When I lived in France, a friend of mine would teach me about wine while we sat around the table, cooked meals, and hung out on the patio. 
+			The experience marked me deeply, and it's one I hope to share with you.
+				<br><br>
+			Studying wine formally, I realized the wine industry has 
+			failed the consumer by not having a knowledge base tailored to their needs. This has discouraged a lot of people from getting into wine, 
+			and that's what I've set out to change through my guided wine tasting course.
+				<br><br>
+			In just an hour or two, I teach the essentials and demystify the other stuff so that you can have confidence in yourself at the restaurant and in the winery. 
+			There really is nothing like it anywhere else. Best of all, I come to you. You get to learn about wine in the comfort of your own space with those you want there with you, just like I did.
+				<br><br>
+	
+		</div>
+	</div>	
 	
 <!-- In-Home Modal -->		
 	<div id="DetailsModal" class="modalContainer hidden">
