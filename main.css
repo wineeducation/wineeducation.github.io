@@ -203,7 +203,7 @@ button:hover{
     flex-flow:column;
     overflow:hidden;
   
-    height:min(fit-content,100%);
+    height:100%;
     width:min(100vw, 30rem);
 
     margin:0;
