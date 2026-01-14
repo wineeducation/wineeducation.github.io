@@ -63,7 +63,11 @@
 			
 		document.getElementById('ModalBackground').classList.replace('hidden', 'visible');
 		document.getElementById(modalID).classList.replace('hidden', 'visible');
-			
+
+
+		let modalHeight = (document.getElementById('ModalBackground').clientHeight - document.getElementById(modalID).clientHeight)*2/3;
+		document.getElementById('backButton').style.bottom = modalHeight;
+		
 		return;
 	}
 	function hideModal(){
