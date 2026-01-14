@@ -226,6 +226,7 @@ button:hover{
   font-variant:small-caps;
   text-align: center;
   letter-spacing:.1rem;
+  overflow:hidden;
 }
 
 .modalBody {
@@ -253,6 +254,7 @@ button:hover{
   font-size:1.8rem;
   font-weight:300;
   line-height:2rem;
+  overflow:hidden;
 }
 
 .close{
@@ -270,6 +272,7 @@ button:hover{
   stroke:#03011290;
   fill:none;
   transition-duration:0.6s;
+  overflow:hidden;
 }
 
 .close:hover{
