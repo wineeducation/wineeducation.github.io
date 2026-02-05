@@ -380,7 +380,7 @@ input::-webkit-inner-spin-button {
   font-size:1.1rem;
 }
 
-#phoneNumber{
+/*#phoneNumber{
   transition-duration:0.6s;
 }
 
@@ -388,4 +388,4 @@ input::-webkit-inner-spin-button {
 #phoneNumber:hover{
   transform: scale(1.1);
   transition-duration:0.6s;
-}
+}*/
