@@ -36,7 +36,7 @@ body {
   outline: none;
 }
 
-#top, #nameLogo, #subheader, #chevron, #paragraph, #portrait, #logo, .title  {
+#top, #nameLogo, #subheader, #chevron, #paragraph, #portrait, #logo, #Certificate, .title  {
   pointer-events: none;
   touch-action: none;
   -ms-touch-action: none;   
