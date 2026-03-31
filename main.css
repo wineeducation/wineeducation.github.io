@@ -291,7 +291,6 @@ Padding: 1rem;
 }
 
 .close:hover{
-  fill:none;
   cursor:none;
 
   -webkit-transform: translate3d(-50%,0,1px) scale(1.1);
