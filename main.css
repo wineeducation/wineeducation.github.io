@@ -287,8 +287,6 @@ Padding: 1rem;
 }
 
 .close:hover{
-  cursor:none;
-
   -webkit-transform: translate3d(-50%,0,1px) scale(1.1);
   transform: translate3d(-50%,0,1px) scale(1.1);
   
@@ -387,13 +385,3 @@ input::-webkit-inner-spin-button {
   border-radius:5px;
   font-size:1.1rem;
 }
-
-/*#phoneNumber{
-  transition-duration:0.6s;
-}
-
-
-#phoneNumber:hover{
-  transform: scale(1.1);
-  transition-duration:0.6s;
-}*/
