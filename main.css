@@ -224,6 +224,13 @@ button:hover{
   
 }
 
+.modalParagraph{
+width: 85%;
+border: 1px solid #030112;
+border-radius: 25px;
+Padding: 1rem;
+}
+
 .title {
   display:block;
   margin: 2rem auto 1rem auto;
