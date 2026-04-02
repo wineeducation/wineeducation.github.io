@@ -178,10 +178,6 @@ button:hover{
 #certificate{
   background-color: transparent;
   transition-duration:0.6s;
-  display: block;
-  margin: 0 auto 1.5rem auto;
-  
-  width:min(90vw, 30rem);
 }
 
 #certificate:hover{
