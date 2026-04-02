@@ -92,16 +92,6 @@ button:hover{
   transition-duration:0.6s;
 }
 
-#certificate{
-  background-color: transparent;
-  transition-duration:0.6s;
-}
-
-#certificate:hover{
-  transform: scale(1.1);
-  transition-duration:0.6s;
-}
-
 /*–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
@@ -185,14 +175,21 @@ button:hover{
   border-radius:25px;
 }
 
-#logo {
+#certificate{
+  background-color: transparent;
+  transition-duration:0.6s;
   display: block;
   margin: 0 auto 1.5rem auto;
   
   width:min(90vw, 30rem);
 }
 
-#WSET {
+#certificate:hover{
+  transform: scale(1.1);
+  transition-duration:0.6s;
+}
+
+#logo {
   display: block;
   margin: 0 auto 1.5rem auto;
   
