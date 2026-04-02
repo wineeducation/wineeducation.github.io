@@ -276,7 +276,7 @@ width: 85%;
 
   position:absolute;
   left:50%;
-  bottom:1rem;
+  bottom:2rem;
 
   z-index:100;
   -webkit-transform: translate3d(-50%,0,1px);
