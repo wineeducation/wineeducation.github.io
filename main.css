@@ -320,7 +320,7 @@ select {
   display:block;
   margin: 0 auto .4rem auto;
   
-  width: 80%;
+  width:75%;
   height: auto;
 
   border-radius:5px;
@@ -364,7 +364,7 @@ input::-webkit-inner-spin-button {
   margin: 0 auto .3rem auto;
   
   height:auto;
-  width:80%;
+  width:75%;
   
   display:flex;
   flex-direction:row;
