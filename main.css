@@ -1,28 +1,25 @@
 /*–––––––––––––––––––––––––––––
-––––––––––––––––––––––––––––––– WEBPAGE BACKGROUNDS
+	WEBPAGE BACKGROUNDS
 –––––––––––––––––––––––––––––*/
 
 body {
-  background-color:#E9DCC9;
-  -webkit-background-size: cover;
-  background-size: cover;
-  height:100%;
-  overflow:auto;
-  -webkit-overflow-scrolling: touch;
-  }
+	background-size: cover;
+	overflow:auto;
+
+	background:#E9DCC9;
+	color:#030112;
+}
 
 .noScroll{
-   touch-action: none;
-   -ms-touch-action: none;
+   overflow:hidden;
 }
 
 /*–––––––––––––––––––––––––––––
-––––––––––––––––––––––––––––––– VISIBILITY
+	VISIBILITY
 –––––––––––––––––––––––––––––*/
 
 .visible {
     opacity:1;
-
     transition:
         opacity 1750ms ease-in,
         transform 1750ms ease-in;
@@ -30,66 +27,47 @@ body {
 
 .hidden {
     opacity:0;
-
     transition:
         opacity 1750ms cubic-bezier(.22,.61,.36,1),
         transform 1750ms cubic-bezier(.22,.61,.36,1);
 }
 
+.modalContainer.visible {
+    pointer-events:auto;
+}
+
 /*–––––––––––––––––––––––––––––
-––––––––––––––––––––––––––––––– UNIVERSAL ELEMENTS
+	UNIVERSAL ELEMENTS
 –––––––––––––––––––––––––––––*/
 
 * {
-  scroll-behavior: smooth;
-  font-family: Quicksand;
-  color:#030112;
-  background-color:#E9DCC9;
-  cursor:default;
-
-  touch-action: pan-y;
-  -ms-touch-action: pan-y;
+	font-family: Quicksand;
+	cursor:default;
+	
+	box-sizing:border-box;
+	touch-action: pan-y;
   
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 *:focus {
   outline: none;
 }
 
-#masthead, #nameLogo, #subheader, #chevron, #paragraph, #portrait, #logo, .title  {
+#masthead, #paragraph, #portrait, #logo, .title  {
   pointer-events: none;
-  touch-action: none;
-  -ms-touch-action: none;   
+  touch-action: none; 
 }
 
-textarea, select, input, button { 
+textarea, input, button { 
   outline: none;
 }
 
 *::-webkit-scrollbar {
   display:none;
-}
-
-b {
-  font-weight:400;
-}
-
-div {
-  margin:0 auto;
-  padding:0;
-}
-
-textarea, input {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-svg{
-  background: transparent;
 }
 
 button {
@@ -118,7 +96,7 @@ button:hover{
 
 
 /*–––––––––––––––––––––––––––––
-––––––––––––––––––––––––––––––– MASTHEAD ELEMENTS
+	MASTHEAD ELEMENTS
 –––––––––––––––––––––––––––––*/
 
 #masthead {
@@ -146,7 +124,7 @@ button:hover{
 }
 
 /*–––––––––––––––––––––––––––––
-––––––––––––––––––––––––––––––– PAGE CONTENT ELEMENTS
+	PAGE CONTENT ELEMENTS
 –––––––––––––––––––––––––––––*/
 
 #paragraph {
@@ -156,7 +134,7 @@ button:hover{
   
   font-size:1rem;
   font-weight:400;
-  line-height:1.5rem;
+  line-height:1.2rem;
 
   width:min(80vw, 30em);
   
@@ -180,50 +158,30 @@ button:hover{
   transition-duration:0.6s;
 }
 
-#logo {
+.logo {
   display: block;
   margin: 0 auto;
 }
 
 /*–––––––––––––––––––––––––––––
-––––––––––––––––––––––––––––––– MODAL ELEMENTS
+	MODAL ELEMENTS
 –––––––––––––––––––––––––––––*/
 
 .modal {
-  position: fixed;
-  height:100%;
-  width: 100%;
-  top: 0%;
-  left: 0%;
+  position:fixed;
+  inset:0;
 
-  Background-color:transparent;
-  Transition: none;
-
-  overflow:hidden;
+  background-color:transparent;
   z-index:99;
 }
 
 .modalContainer {
-    display:flex;
-    flex-flow:column;
-    overflow:hidden;
-  
-    height:100%;
-    width:min(100vw, 30rem);
-
-    margin:0;
-    padding:0;
-    border:none;
-
-    position:absolute;    
-    left:50%;
-    -webkit-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-  
-}
-
-.modalParagraph{
-width: 75%;
+  width:min(100vw,30rem);
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:100;
+  pointer-events:none;
 }
 
 .title {
@@ -239,32 +197,13 @@ width: 75%;
 }
 
 .modalBody {
-  Flex:1;
-
-  position:relative;
-  overscroll-behavior: contain;
-  contain:strict;
-
-  margin:0 0 6rem 0;
-  padding:0 0 1rem 0;
-  width:auto;
-  
-  font-size:1rem;
-  font-weight:400;
-  line-height:1.5rem;
-  
-  overflow-y:hidden;
-  overflow-x:hidden;
+    margin:0 0 6rem;
+    padding-bottom:1rem;
 }
 
-.sectionHeader {
-  
-  margin:1.5rem auto 1rem auto;
-  text-align:center;
-  font-size:1.8rem;
-  font-weight:300;
-  line-height:2rem;
-  overflow:hidden;
+.modalParagraph {
+    width:75%;
+    margin:auto;
 }
 
 .close{
@@ -284,7 +223,7 @@ width: 75%;
 
   pointer-events:auto;
   touch-action:auto;
-  -ms-touch-action:auto;
+
 }
 
 .close:hover{
@@ -295,70 +234,57 @@ width: 75%;
 }
 
 /*–––––––––––––––––––––––––––––
-––––––––––––––––––––––––––––––– FORM ELEMENTS
+	FORM ELEMENTS
 –––––––––––––––––––––––––––––*/
 
-input::placeholder {
-    opacity: .6;
-    color: darkslategrey;
-}
-textarea::placeholder{
-    opacity: .6;
-    color: darkslategrey;
+.formQ,
+.formInline{
+    background:#F6F0E7;
+    border:1px solid rgba(3,1,18,.12);
+    box-shadow:
+        inset 0 1px 1px rgba(255,255,255,.6),
+        0 2px 8px rgba(0,0,0,.05);
+    backdrop-filter:none;
 }
 
-select {
-  -webkit-appearance:none;
-  box-shadow:none !important;
-  box-sizing: border-box;
-  
-  background: url("images/dropdownarrow.svg") no-repeat right 1rem center;
-  background-size: .6rem .3rem;
+input::placeholder,
+textarea::placeholder{
+    color:darkslategrey;
+    opacity:.6;
 }
 
 .formQ {
-  display:block;
-  margin: 0 auto .4rem auto;
+	display:block;
+	margin: 0 auto .4rem auto;
   
-  width:75%;
-  height: auto;
+	width:75%;
+	height: auto;
 
-  border-radius:5px;
-  border:.1rem solid;
+	border-radius:5px;
+	border:.1rem solid;
 
+	padding:.2rem .2rem .2rem 1rem;
+  
+	font-size:1.1rem;
+	font-variant:small-caps;
+
+	overflow:hidden;
+}
+
+.formInline {
+  width:100%;
   padding:.2rem .2rem .2rem 1rem;
+
+  background-repeat:no-repeat;
   
-  font-size:1.1rem;
   font-variant:small-caps;
-
-  overflow:hidden;
-}
-
-input[type="date"]{
-  font-size:1.1rem; 
-  margin:0 0 1px 0;
-}
-input[type="time"]{
-  font-size: 1.1rem; 
-  margin: 0 0 1px 0;
-}
-
-input[type="time"]::-webkit-calendar-picker-indicator {
-  display: none;
-}
-input[type="date"]::-webkit-calendar-picker-indicator {
-  display: none;
-}
-
-input::-webkit-date-and-time-value{
   text-align:left;
+
+  border:.1rem solid;
+  border-radius:5px;
+  font-size:1.1rem;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
 
 .flex-container{
   margin: 0 auto .3rem auto;
@@ -371,17 +297,6 @@ input::-webkit-inner-spin-button {
   justify-content: space-between;
 }
 
-.formInline {
-  width:100%;
-  padding:.2rem .2rem .2rem 1rem;
-
-  background-color:transparent;
-  background-repeat:no-repeat;
-  
-  font-variant:small-caps;
-  text-align:left;
-
-  border:.1rem solid;
-  border-radius:5px;
-  font-size:1.1rem;
-}
+/*–––––––––––––––––––––––––––––
+	TESTING
+–––––––––––––––––––––––––––––*/
