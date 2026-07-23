@@ -100,9 +100,10 @@ button:hover{
 –––––––––––––––––––––––––––––*/
 
 #masthead {
-  height:110vh;
-  display:flex;
-  flex-flow:column;
+	height:100dvh;
+	padding-bottom: 4rem;
+	display:flex;
+	flex-flow:column;
 }
 
 #nameLogo {
