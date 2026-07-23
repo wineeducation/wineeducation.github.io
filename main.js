@@ -10,7 +10,7 @@ let loadScreen;
 const INTRO_DELAY = 400;
 const INTRO_FADE = 1750;
 const MODAL_TOTAL = 1250;
-const CROSSFADE = 0;
+const CROSSFADE = 400;
 
 
 function sleep(ms) {
