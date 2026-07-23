@@ -309,13 +309,21 @@ textarea, input, button {
     height: fit-content;
 
     background-color: transparent;
+    color: #030112;
+
     border: none;
 
+    -webkit-appearance: none;
+    appearance: none;
+
+    font-family: Quicksand, sans-serif;
     font-size: 2rem;
     font-weight: 300;
     font-variant: small-caps;
     letter-spacing: .1rem;
     text-align: center;
+
+    cursor: pointer;
 
     transition:
         transform 400ms ease,
