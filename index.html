@@ -87,10 +87,14 @@ function hideLoadScreen(){
 }
 
 function loadBody() {
+
     requestAnimationFrame(() => {
+
         masthead.classList.replace('hidden', 'visible');
         content.classList.replace('hidden', 'visible');
+
     });
+
 }
 
 //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -151,11 +155,11 @@ async function hideModal(){
 //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 function showMain(){
-	[masthead,content].forEach(x=>x.classList.replace('hidden','visible'));
+  [masthead,content].forEach(x=>x.classList.replace('hidden','visible'));
 }
 
 function hideMain(){
-	[masthead,content].forEach(x=>x.classList.replace('visible','hidden'));
+  [masthead,content].forEach(x=>x.classList.replace('visible','hidden'));
 }
 
 //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -310,9 +314,25 @@ document.addEventListener("DOMContentLoaded", loadFunctions);
 	BACK BUTTON
 –––––––––––––––––––––––––––––––––––––––––––––-->
 
-<svg id="backButton" class="close hidden" viewBox="0 0 100 100" stroke="#03011290" stroke-width="4" stroke-linecap="round" fill="#E9DCC9" xmlns="http://www.w3.org/2000/svg" onclick="hideModal()">
-	<circle cx="50" cy="50" r="45"/>
-	<path d="M55 30 L40 50 L55 70"/>
+<svg id="backButton"
+     class="close hidden"
+     viewBox="0 0 200 120"
+     stroke="#03011290"
+     stroke-width="4"
+     stroke-linecap="round"
+     fill="#E9DCC9"
+     xmlns="http://www.w3.org/2000/svg"
+     onclick="hideModal()">
+
+    <rect x="10"
+          y="6"
+          width="180"
+          height="108"
+          rx="40"/>
+
+    <path d="M110 40 L90 60 L110 80"
+          fill="none"/>
+
 </svg>
 
 <!--––––––––––––––––––––––––––––––––––––––––––––
@@ -328,5 +348,7 @@ document.addEventListener("DOMContentLoaded", loadFunctions);
 –––––––––––––––––––––––––––––––––––––––––––––-->
 
 </div>	
+
 </body>
+
 </html>
