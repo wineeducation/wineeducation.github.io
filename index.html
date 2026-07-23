@@ -1,302 +1,354 @@
-/*–––––––––––––––––––––––––––––
-	WEBPAGE BACKGROUNDS
-–––––––––––––––––––––––––––––*/
+<!DOCTYPE html>
+<html>
+<head>
 
-body {
-	background-size: cover;
-	overflow:auto;
+<META NAME="robots" CONTENT="noindex, nofollow">
+<title>Wine Education in SB</title>
+           
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+         
+<link rel="stylesheet" type="text/css" href="main.css">
+<link href='https://fonts.googleapis.com/css?family=Quicksand:300,400,500' rel='stylesheet' type='text/css'>
 
-	background:#E9DCC9;
-	color:#030112;
-}
-
-.noScroll{
-   overflow:hidden;
-}
-
-/*–––––––––––––––––––––––––––––
-	VISIBILITY
-–––––––––––––––––––––––––––––*/
-
-.visible {
-    opacity:1;
-    transition:
-        opacity 1750ms ease-in,
-        transform 1750ms ease-in;
-}
-
-.hidden {
-    opacity:0;
-    transition:
-        opacity 1750ms cubic-bezier(.22,.61,.36,1),
-        transform 1750ms cubic-bezier(.22,.61,.36,1);
-}
-
-.modalContainer.visible {
-    pointer-events:auto;
-}
-
-/*–––––––––––––––––––––––––––––
-	UNIVERSAL ELEMENTS
-–––––––––––––––––––––––––––––*/
-
-* {
-	font-family: Quicksand;
-	cursor:default;
+<link rel="preload" href="images/logo.svg" as="image">
+<link rel="preload" href="images/name.svg" as="image">
+<link rel="preload" href="images/portrait.png" as="image">
 	
-	box-sizing:border-box;
-	touch-action: pan-y;
-  
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	user-select: none;
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="safari-pinned-tab.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+</head>
+	
+<script>
+
+let modalName = "";
+let transitioning = false;
+let masthead;
+let content;
+let modalBackground;
+let backButton;
+let loadScreen;
+
+const INTRO_FADE = 1750;
+const INTRO_DELAY = 750;
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+	
+//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//	LOAD MODAL
+//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+async function loadFunctions() {
+
+    masthead = document.getElementById('masthead');
+    content = document.getElementById('content');
+    modalBackground = document.getElementById('modalBackground');
+    backButton = document.getElementById('backButton');
+    loadScreen = document.getElementById('loadScreenModal');
+
+    await new Promise(requestAnimationFrame);
+    await sleep(INTRO_DELAY);
+
+    modalBackground.classList.replace('hidden','visible');
+    loadScreen.classList.replace('hidden','visible');
+
+    await sleep(INTRO_FADE);
+
+    hideLoadScreen();
+
+    await sleep(INTRO_FADE);
+
+    modalBackground.style.visibility = "hidden";
+    modalBackground.style.pointerEvents = "none";
+
+    await new Promise(requestAnimationFrame);
+    await new Promise(requestAnimationFrame);
+
+    loadBody();
+
+    document.body.classList.remove('noScroll');
+
+    await sleep(INTRO_FADE);
+
+    setMastheadContentVisibility();
 }
 
-*:focus {
-  outline: none;
+//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//	INTRO HELPER FUNDS
+//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+function hideLoadScreen(){
+	loadScreen.classList.replace('visible', 'hidden');
 }
 
-#masthead, #paragraph, #portrait, #logo, .title  {
-  pointer-events: none;
-  touch-action: none; 
-}
+function loadBody() {
 
-textarea, input, button { 
-  outline: none;
-}
+    requestAnimationFrame(() => {
 
-*::-webkit-scrollbar {
-  display:none;
-}
+        masthead.classList.replace('hidden', 'visible');
+        content.classList.replace('hidden', 'visible');
 
-button {
-  display:block;
-  margin:0 auto;
-  padding:1px;
-  
-  width:fit-content;
-  height:fit-content;
-  transition-duration:0.6s;
-
-  background-color: transparent;
-  border:none;
-
-  font-size:2rem;
-  font-weight:300;
-  font-variant:small-caps;
-  letter-spacing:.1rem;
-  text-align: center;
-}
-
-button:hover{
-  transform: scale(1.1);
-  transition-duration:0.6s;
-}
-
-
-/*–––––––––––––––––––––––––––––
-	MASTHEAD ELEMENTS
-–––––––––––––––––––––––––––––*/
-
-#masthead {
-  height:110vh;
-  display:flex;
-  flex-flow:column;
-}
-
-#nameLogo {
-  display: block;
-  margin: 0 auto 3rem auto;
-  
-  width:min(70vw, 30rem);
-}
-
-#subheader {
-  padding:0;
-  margin:0;
-  
-  font-size: 1.1rem;
-  line-height:2rem;
-  font-weight:200;
-  text-align:center;
-  letter-spacing: .4rem;
-}
-
-/*–––––––––––––––––––––––––––––
-	PAGE CONTENT ELEMENTS
-–––––––––––––––––––––––––––––*/
-
-#paragraph {
-  margin: 0 auto 3rem auto;
-  padding: .1rem;
-  text-align:left;
-  
-  font-size:1rem;
-  font-weight:400;
-  line-height:1.2rem;
-
-  width:min(80vw, 30em);
-  
-  overflow:hidden;
-}
-
-#portrait{
-  display:block;
-  width:min(75vw, 30rem);
-  margin:0 auto 3rem auto;
-  border-radius:25px;
-}
-
-#certificate{
-  background-color: transparent;
-  transition-duration:0.6s;
-}
-
-#certificate:hover{
-  transform: scale(1.1);
-  transition-duration:0.6s;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto;
-}
-
-/*–––––––––––––––––––––––––––––
-	MODAL ELEMENTS
-–––––––––––––––––––––––––––––*/
-
-.modal {
-  position:fixed;
-  inset:0;
-
-  background-color:transparent;
-  z-index:99;
-}
-
-.modalContainer {
-  width:min(100vw,30rem);
-  position:absolute;
-  left:50%;
-  transform:translateX(-50%);
-  z-index:100;
-  pointer-events:none;
-}
-
-.title {
-  display:block;
-  margin: 2rem auto 1rem auto;
-
-  font-size: 2.5rem;
-  font-weight:300;
-  font-variant:small-caps;
-  text-align: center;
-  letter-spacing:.1rem;
-  overflow:hidden;
-}
-
-.modalBody {
-    margin:0 0 6rem;
-    padding-bottom:1rem;
-}
-
-.modalParagraph {
-    width:75%;
-    margin:auto;
-}
-
-.close{
-  width:5rem;
-  height:3rem;
-
-  position:absolute;
-  left:50%;
-  bottom:3rem;
-
-  z-index:100;
-  -webkit-transform: translate3d(-50%,0,1px);
-  transform: translate3d(-50%,0,1px);
-
-  transition-duration:0.6s;
-  overflow:hidden;
-
-  pointer-events:auto;
-  touch-action:auto;
+    });
 
 }
 
-.close:hover{
-  -webkit-transform: translate3d(-50%,0,1px) scale(1.1);
-  transform: translate3d(-50%,0,1px) scale(1.1);
-  
-  transition-duration:0.6s;
+//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//	SHOW MODAL
+//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+	
+async function showModal(modalID){
+
+    if (transitioning) return;
+    transitioning = true;
+
+    modalName = modalID;
+
+    document.body.classList.add('noScroll');
+
+    hideMain();
+
+    await sleep(750);
+
+    showModalBackground();
+
+    document
+        .getElementById(modalName)
+        .classList.replace('hidden','visible');
+
+    backButton.classList.replace('hidden','visible');
+
+    transitioning = false;
+
+}
+	
+//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//	HIDE MODAL
+//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+async function hideModal(){
+	if (transitioning) return;
+	transitioning = true;
+
+	const modal = document.getElementById(modalName);
+
+	modal.classList.replace('visible','hidden');
+	backButton.classList.replace('visible','hidden');
+
+	await sleep(750);
+	showMain();  
+	await sleep(600);
+	hideModalBackground();
+
+	document.body.classList.remove('noScroll');
+
+	modalName="";
+	transitioning = false;
 }
 
-/*–––––––––––––––––––––––––––––
-	FORM ELEMENTS
-–––––––––––––––––––––––––––––*/
+//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+// 	MODAL HELPER FUNCTIONS
+//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.formQ,
-.formInline{
-    background:#F6F0E7;
-    border:1px solid rgba(3,1,18,.12);
-    box-shadow:
-        inset 0 1px 1px rgba(255,255,255,.6),
-        0 2px 8px rgba(0,0,0,.05);
-    backdrop-filter:none;
+function showMain(){
+  [masthead,content].forEach(x=>x.classList.replace('hidden','visible'));
 }
 
-input::placeholder,
-textarea::placeholder{
-    color:darkslategrey;
-    opacity:.6;
+function hideMain(){
+  [masthead,content].forEach(x=>x.classList.replace('visible','hidden'));
 }
 
-.formQ {
-	display:block;
-	margin: 0 auto .4rem auto;
-  
-	width:75%;
-	height: auto;
+//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//	MODAL BACKGROUND HELPERS
+//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-	border-radius:5px;
-	border:.1rem solid;
-
-	padding:.2rem .2rem .2rem 1rem;
-  
-	font-size:1.1rem;
-	font-variant:small-caps;
-
-	overflow:hidden;
+function showModalBackground(){
+  Object.assign(modalBackground.style,{
+    visibility:"visible",
+    opacity:1,
+    pointerEvents:"auto"
+  });
 }
 
-.formInline {
-  width:100%;
-  padding:.2rem .2rem .2rem 1rem;
-
-  background-repeat:no-repeat;
-  
-  font-variant:small-caps;
-  text-align:left;
-
-  border:.1rem solid;
-  border-radius:5px;
-  font-size:1.1rem;
+function hideModalBackground(){
+  Object.assign(modalBackground.style,{
+    visibility:"hidden",
+    opacity:0,
+    pointerEvents:"none"
+  });
 }
 
+document.addEventListener("DOMContentLoaded", loadFunctions);
 
-.flex-container{
-  margin: 0 auto .3rem auto;
-  
-  height:auto;
-  width:75%;
-  
-  display:flex;
-  flex-direction:row;
-  justify-content: space-between;
-}
+</script>
+	
+<!--––––––––––––––––––––––––––––––––––––––––––––
+	MASTHEAD
+–––––––––––––––––––––––––––––––––––––––––––––-->
 
-/*–––––––––––––––––––––––––––––
-	TESTING
-–––––––––––––––––––––––––––––*/
+<body class="noScroll">
+
+<div id="masthead" class="hidden">
+	<div style="margin-top: min(25vh, 15rem);">
+		<img src="images/name.svg" id="nameLogo">
+		<div id="subheader">SANTA BARBARA</div>
+	</div>
+</div>
+	
+<!--––––––––––––––––––––––––––––––––––––––––––––
+	CONTENT
+–––––––––––––––––––––––––––––––––––––––––––––-->
+
+<div id="content" class="hidden">	      
+	<img src="images/portrait.png" id="portrait">
+		
+	<p id="paragraph" style="text-align: center; font-size:1.2rem; line-height:2;">
+		Teaching the essentials.<br>Demystifying the rest.
+	</p>
+
+	<button type="button" class="button" style="margin-bottom:1.5rem;" onclick="showModal('AboutModal')">About</button>
+	<button type="button" class="button" style="margin-bottom:1.5rem;" onclick="showModal('DetailsModal')">Details</button>
+        <button type="button" class="button" style="margin-top:0; margin-bottom:2rem;" onclick="showModal('ContactModal')">Contact</button>
+
+	<div style="display:block; text-align:center;">
+	<a href="https://certificates.wsetglobal.com/d89460ff-199b-4d7a-862a-f48dcfdcc670" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin:0; padding:0;"><img id="certificate" src="images/WSET.png" alt="WSET 3" style="width:8rem;height:auto;"></a>
+	</div>
+		
+	<div style="display:block;">
+		<img src="images/logo.svg" class="logo" style="width: 7rem;  margin:2rem auto;">
+	</div>
+	
+</div>
+
+<!--––––––––––––––––––––––––––––––––––––––––––––
+	MODAL SECTION
+–––––––––––––––––––––––––––––––––––––––––––––-->
+
+<div id="modalBackground" class="modal hidden">
+
+<!--––––––––––––––––––––––––––––––––––––––––––––
+	ABOUT ME MODAL
+–––––––––––––––––––––––––––––––––––––––––––––-->
+	
+<div id="AboutModal" class="modalContainer hidden">
+	<p class="title">About</p>
+		
+	<div class="modalBody">
+		<div class="modalParagraph"> 
+			The wine industry doesn't teach consumers what they really need to know so
+			it can seem like there is so much to learn and memorize. It's why getting into 
+			wine can be discouraging, and that's what I've set out to change.
+			<br><br>
+			In just a couple of hours, I teach the essentials and demystify the rest. Best of 
+			all, I come to you so you can learn about wine in your own space with those you 
+			want there with you.
+		</div>
+	</div>
+</div>	
+	
+<!--––––––––––––––––––––––––––––––––––––––––––––
+	IN HOME MODAL
+–––––––––––––––––––––––––––––––––––––––––––––-->
+		
+<div id="DetailsModal" class="modalContainer hidden">
+	<p class="title">Details</p>
+		
+	<div class="modalBody">
+		<div class="modalParagraph">
+			- a single two hour event
+			<br>
+			- happens in your home
+			<br>
+			- $50 per person, plus the cost wine
+			<br><br>
+			I work with a local wine shop to choose the bottles for you to pick up. From there, the freedom is yours. 
+			Serve a meal, lounge on the patio, or throw a party; and I'll tailor the program to your vibe.
+			<br><br>
+			Fill out a contact form or message me directly to book or ask questions.
+			<br><br>
+			Other Services:
+			<br>
+			&emsp;- Service Industry staff education<br>
+			&emsp;- Private events<br>
+			&emsp;- Cellar curation
+		</div>	
+	</div>
+</div>
+
+<!--––––––––––––––––––––––––––––––––––––––––––––
+	CONTACT MODAL
+–––––––––––––––––––––––––––––––––––––––––––––-->
+
+<div id="ContactModal" class="modalContainer hidden">
+	<p class="title">Contact</p>
+		
+	<div class="modalBody" style="justify-content:center; align-items:center;">
+		<form id="contact" action="https://getform.io/f/0f7eb169-4025-4982-bcd9-870d3556430c" method="post" style="margin:0; padding:0; text-align:center;">
+			<input type="text" id="name" name="Name" placeholder="Name *" class="formQ" required>            
+			<input type="email" id="email" name="Email" placeholder="Email *" class="formQ" required>
+
+			<div class="flex-container" style="margin-bottom:1rem;">
+				<div style="width:49%;"><input type="tel" id="phone" name="Phone" placeholder="Phone" class="formInline"></div>  
+				<div style="width:2%;"></div>
+				<div style="width:49%;"><input type="tel" autocomplete="postal-code" id="zip" pattern="[0-9]{5}" name="ZIP" placeholder="Zip *" min="93101" max="93117" step="1" class="formInline" required></div>
+			</div>
+
+			<textarea id="details" name="Details" class="formQ" style="margin-bottom:2rem; padding-bottom:.4rem; resize:none;" rows="5" placeholder="questions, reservation request details, etc."></textarea>
+			
+			<div style="padding:0; margin-bottom:0;">
+				<button type="submit" class="button" style="font-size:1.9rem;">Submit</button>
+			</div>
+		</form>
+		
+		<div>
+			<div style="text-align:center; margin:3rem auto 0 auto; width:fit-content; display:block; cursor:none;"><img src="images/number.svg" id="phoneNumber" style="display:block; width:12rem;"></div>
+		</div>
+	</div>	
+</div>	
+
+<!--––––––––––––––––––––––––––––––––––––––––––––
+	BACK BUTTON
+–––––––––––––––––––––––––––––––––––––––––––––-->
+
+<svg id="backButton"
+     class="close hidden"
+     viewBox="0 0 200 120"
+     stroke="#03011290"
+     stroke-width="4"
+     stroke-linecap="round"
+     fill="#E9DCC9"
+     xmlns="http://www.w3.org/2000/svg"
+     onclick="hideModal()">
+
+    <rect x="10"
+          y="6"
+          width="180"
+          height="108"
+          rx="40"/>
+
+    <path d="M110 40 L90 60 L110 80"
+          fill="none"/>
+
+</svg>
+
+<!--––––––––––––––––––––––––––––––––––––––––––––
+	LOAD SCREEN MODAL
+–––––––––––––––––––––––––––––––––––––––––––––-->
+
+<div id="loadScreenModal" class="modalContainer hidden noScroll" style="display:block;">
+	<img src="images/logo.svg" class="logo" style="width: min(60vw, 20rem); margin-top: min(25vh, 15rem);">
+</div>
+
+<!--––––––––––––––––––––––––––––––––––––––––––––
+	CLOSE MODAL BACKGROUND, BODY, HTML
+–––––––––––––––––––––––––––––––––––––––––––––-->
+
+</div>	
+
+</body>
+
+</html>
