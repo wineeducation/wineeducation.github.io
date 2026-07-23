@@ -1,20 +1,4 @@
 /*–––––––––––––––––––––––––––––
-	WEBPAGE BACKGROUNDS
-–––––––––––––––––––––––––––––*/
-
-body {
-	background-size: cover;
-	overflow:auto;
-
-	background:#E9DCC9;
-	color:#030112;
-}
-
-.noScroll{
-   overflow:hidden;
-}
-
-/*–––––––––––––––––––––––––––––
 	VISIBILITY
 –––––––––––––––––––––––––––––*/
 
@@ -37,71 +21,12 @@ body {
 }
 
 /*–––––––––––––––––––––––––––––
-	UNIVERSAL ELEMENTS
-–––––––––––––––––––––––––––––*/
-
-* {
-	font-family: Quicksand;
-	cursor:default;
-	
-	box-sizing:border-box;
-	touch-action: pan-y;
-  
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	user-select: none;
-}
-
-*:focus {
-  outline: none;
-}
-
-#masthead, #paragraph, #portrait, #logo, .title  {
-  pointer-events: none;
-  touch-action: none; 
-}
-
-textarea, input, button { 
-  outline: none;
-}
-
-*::-webkit-scrollbar {
-  display:none;
-}
-
-button {
-  display:block;
-  margin:0 auto;
-  padding:1px;
-  
-  width:fit-content;
-  height:fit-content;
-  transition-duration:0.6s;
-
-  background-color: transparent;
-  border:none;
-
-  font-size:2rem;
-  font-weight:300;
-  font-variant:small-caps;
-  letter-spacing:.1rem;
-  text-align: center;
-}
-
-button:hover{
-  transform: scale(1.1);
-  transition-duration:0.6s;
-}
-
-
-/*–––––––––––––––––––––––––––––
 	MASTHEAD ELEMENTS
 –––––––––––––––––––––––––––––*/
 
 #masthead {
 	height:100dvh;
-	padding-bottom: 4rem;
+	margin-bottom: 4rem;
 	display:flex;
 	flex-flow:column;
 }
@@ -296,6 +221,80 @@ textarea::placeholder{
   display:flex;
   flex-direction:row;
   justify-content: space-between;
+}
+
+/*–––––––––––––––––––––––––––––
+	WEBPAGE BACKGROUNDS
+–––––––––––––––––––––––––––––*/
+
+body {
+	background-size: cover;
+	overflow:auto;
+
+	background:#E9DCC9;
+	color:#030112;
+}
+
+.noScroll{
+   overflow:hidden;
+}
+
+/*–––––––––––––––––––––––––––––
+	UNIVERSAL DEFINITIONS
+–––––––––––––––––––––––––––––*/
+
+* {
+	font-family: Quicksand;
+	cursor:default;
+	
+	box-sizing:border-box;
+	touch-action: pan-y;
+  
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+#masthead, #paragraph, #portrait, #logo, .title  {
+  pointer-events: none;
+  touch-action: none; 
+}
+
+textarea, input, button { 
+  outline: none;
+}
+
+*::-webkit-scrollbar {
+  display:none;
+}
+
+button {
+  display:block;
+  margin:0 auto;
+  padding:1px;
+  
+  width:fit-content;
+  height:fit-content;
+  transition-duration:0.6s;
+
+  background-color: transparent;
+  border:none;
+
+  font-size:2rem;
+  font-weight:300;
+  font-variant:small-caps;
+  letter-spacing:.1rem;
+  text-align: center;
+}
+
+button:hover{
+  transform: scale(1.1);
+  transition-duration:0.6s;
 }
 
 /*–––––––––––––––––––––––––––––
