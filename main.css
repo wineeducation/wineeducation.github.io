@@ -98,7 +98,7 @@
 }
 
 .modalContainer {
-    width:min(100vw,30rem);
+    width:min(90vw,25rem);
     position:absolute;
     left:50%;
     transform:translate(-50%);
@@ -114,15 +114,6 @@
 	pointer-events:auto;
 }
 
-.modalContent {
-    transform:translateY(-12px);
-    transition:transform 1750ms cubic-bezier(.22,.61,.36,1);
-}
-
-.modalContainer.visible .modalContent {
-    transform:translateY(0);
-}
-
 .title {
   display:block;
   margin: clamp(3rem, 10vh, 5rem) auto 1rem auto;
@@ -135,13 +126,8 @@
   overflow:hidden;
 }
 
-.modalBody {
-    margin:0 0 6rem;
-    padding-bottom:1rem;
-}
-
 .modalParagraph {
-	width:75%;
+	width:100%;
 	line-height:1.7;
 	margin:auto;
 }
@@ -170,7 +156,7 @@ textarea::placeholder{
 	display:block;
 	margin: 0 auto .4rem auto;
   
-	width:75%;
+	width:100%;
 	height: auto;
 
 	border-radius:5px;
@@ -203,7 +189,7 @@ textarea::placeholder{
   margin: 0 auto .3rem auto;
   
   height:auto;
-  width:75%;
+  width:100%;
   
   display:flex;
   flex-direction:row;
