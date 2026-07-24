@@ -204,6 +204,10 @@ zip.addEventListener("input", () => {
 
 loadFunctions();
 
+//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//	CLOSE MODAL LISTENER (MUST COME AFTER loadFunctions();
+//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
 modalBackground.addEventListener("click", (e) => {
 
     if (!modalName) return;
