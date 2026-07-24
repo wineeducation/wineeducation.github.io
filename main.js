@@ -142,7 +142,6 @@ function showMain(){
 
 }
 
-
 function hideMain(){
 
     [masthead, content].forEach(element =>
@@ -163,9 +162,7 @@ function showModalBackground(){
         opacity: 1,
         pointerEvents: "auto"
     });
-
 }
-
 
 function hideModalBackground(){
 
@@ -174,7 +171,6 @@ function hideModalBackground(){
         opacity: 0,
         pointerEvents: "none"
     });
-
 }
 
 //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -200,33 +196,29 @@ zip.addEventListener("input", () => {
 });
 
 
-// Start page
+//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//	START PAGE
+//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 loadFunctions();
 
 //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-//	CLOSE MODAL LISTENER (MUST COME AFTER loadFunctions();
+//	CLOSE MODAL
 //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 modalBackground.addEventListener("click", (e) => {
 
     if (!modalName) return;
+   	 const modal = document.getElementById(modalName);
 
-    const modal = document.getElementById(modalName);
-
-    // Contact modal:
-    // only close when clicking outside the content
     if (modalName === "ContactModal") {
-
-        if (!modal.querySelector(".modalContent").contains(e.target)) {
+        if (!modal.querySelector(".modalBody").contains(e.target)) {
             hideModal();
         }
 
         return;
     }
 
-    // About & Details:
-    // close on any click
     hideModal();
 
 });
