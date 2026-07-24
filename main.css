@@ -86,7 +86,7 @@
 }
 
 /*–––––––––––––––––––––––––––––
-	MODAL ELEMENTS
+	MODAL BASE ELEMENTS
 –––––––––––––––––––––––––––––*/
 
 .modal {
@@ -101,7 +101,6 @@
     width:min(90vw,25rem);
     position:absolute;
     left:50%;
-    transform:translate(-50%);
 
     z-index:100;
 
@@ -113,6 +112,24 @@
 	opacity:1;
 	pointer-events:auto;
 }
+
+.modalContainer:not(#loadScreenModal) {
+    transform: translate(-50%, -20px);
+}
+
+.modalContainer.visible:not(#loadScreenModal) {
+    transform: translate(-50%, 0);
+}
+#loadScreenModal {
+    transform: translate(-50%, 0);
+}
+#loadScreenModal.visible {
+    transform: translate(-50%, 0);
+}
+
+/*–––––––––––––––––––––––––––––
+	MODAL CONTENT
+–––––––––––––––––––––––––––––*/
 
 .title {
   display:block;
