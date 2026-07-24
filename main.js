@@ -27,7 +27,6 @@ async function loadFunctions() {
     masthead = document.getElementById('masthead');
     content = document.getElementById('content');
     modalBackground = document.getElementById('modalBackground');
-    backButton = document.getElementById('backButton');
     loadScreen = document.getElementById('loadScreenModal');
 
     await new Promise(requestAnimationFrame);
@@ -96,8 +95,6 @@ async function showModal(modalID){
         .getElementById(modalName)
         .classList.replace('hidden','visible');
 
-    backButton.classList.replace('hidden','visible');
-
     transitioning = false;
 
 }
@@ -115,8 +112,6 @@ async function hideModal(){
     const modal = document.getElementById(modalName);
 
     modal.classList.replace('visible','hidden');
-
-    backButton.classList.replace('visible','hidden');
 
     await sleep(CROSSFADE);
 
@@ -204,6 +199,30 @@ zip.addEventListener("input", () => {
     }
 });
 
+
 // Start page
 
 loadFunctions();
+
+modalBackground.addEventListener("click", (e) => {
+
+    if (!modalName) return;
+
+    const modal = document.getElementById(modalName);
+
+    // Contact modal:
+    // only close when clicking outside the content
+    if (modalName === "ContactModal") {
+
+        if (!modal.querySelector(".modalContent").contains(e.target)) {
+            hideModal();
+        }
+
+        return;
+    }
+
+    // About & Details:
+    // close on any click
+    hideModal();
+
+});
