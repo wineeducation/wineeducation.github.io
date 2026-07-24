@@ -130,9 +130,9 @@
 			<input type="email" id="email" name="Email" placeholder="Email *" class="formQ" required>
 
 			<div class="flex-container" style="margin-bottom:1rem;">
-				<div style="width:49%;"><input type="tel" id="phone" name="Phone" placeholder="Phone" class="formInline"></div>  
+				<div style="width:49%;"><input type="tel" id="phone" name="Phone" autocomplete="tel" placeholder="Phone" class="formInline"></div>  
 				<div style="width:2%;"></div>
-				<div style="width:49%;"><input type="tel" autocomplete="postal-code" id="zip" pattern="[0-9]{5}" name="ZIP" placeholder="Zip *" min="93101" max="93117" step="1" class="formInline" required></div>
+				<div style="width:49%;"><input type="text" inputmode="numeric" autocomplete="postal-code" id="zip" name="ZIP" placeholder="Zip *" class="formInline" required></div>
 			</div>
 
 			<textarea id="details" name="Details" class="formQ" style="margin-bottom:2rem; padding-bottom:.4rem; resize:none;" rows="5" placeholder="questions, reservation request details, etc."></textarea>
