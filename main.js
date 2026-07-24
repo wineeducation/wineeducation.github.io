@@ -182,6 +182,27 @@ function hideModalBackground(){
 
 }
 
+//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//	ZIP VALIDATION
+//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+const zip = document.getElementById("zip");
+
+zip.addEventListener("input", () => {
+    const value = zip.value;
+
+    const valid =
+        /^9310[1-9]$/.test(value) ||
+        /^9311[0-7]$/.test(value);
+
+    if (value.length === 5 && !valid) {
+        zip.setCustomValidity(
+            "Sorry, I currently only offer classes within the Santa Barbara area."
+        );
+    } else {
+        zip.setCustomValidity("");
+    }
+});
 
 // Start page
 
