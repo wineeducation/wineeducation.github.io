@@ -29,8 +29,7 @@
 
 #nameLogo {
   display: block;
-  margin: 0 auto 3rem auto;
-  
+  margin: 0 auto 3rem;
   width:min(70vw, 30rem);
 }
 
@@ -132,7 +131,7 @@
 
 .title {
   display:block;
-  margin: clamp(3rem, 10vh, 5rem) auto 1rem auto;
+  margin: clamp(3rem, 10vh, 5rem) auto 1rem;
 
   font-size: 2.5rem;
   font-weight:300;
