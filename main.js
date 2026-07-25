@@ -78,17 +78,13 @@ function loadBody(){
 async function showModal(modalID){
 
     if (transitioning) return;
-
-    transitioning = true;
+        transitioning = true;
 
     modalName = modalID;
-
     document.body.classList.add('noScroll');
 
     hideMain();
-
     await sleep(CROSSFADE);
-
     showModalBackground();
 
     document
@@ -96,7 +92,6 @@ async function showModal(modalID){
         .classList.replace('hidden','visible');
 
     transitioning = false;
-
 }
 
 
@@ -107,24 +102,20 @@ async function showModal(modalID){
 async function hideModal(){
 
     if (transitioning) return;
-    transitioning = true;
+        transitioning = true;
 
     const modal = document.getElementById(modalName);
-
     modal.classList.replace('visible','hidden');
 
     await sleep(CROSSFADE);
 
     showMain();
-
     await sleep(Math.max(0, MODAL_TOTAL - CROSSFADE));
-
     hideModalBackground();
 
     document.body.classList.remove('noScroll');
-
+   
     modalName = "";
-
     transitioning = false;
 
 }
@@ -135,37 +126,28 @@ async function hideModal(){
 //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 function showMain(){
-
     [masthead, content].forEach(element =>
         element.classList.replace('hidden','visible')
     );
-
 }
-
 function hideMain(){
-
     [masthead, content].forEach(element =>
         element.classList.replace('visible','hidden')
     );
-
 }
-
 
 //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 //	MODAL BACKGROUND HELPERS
 //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 function showModalBackground(){
-
     Object.assign(modalBackground.style, {
         visibility: "visible",
         opacity: 1,
         pointerEvents: "auto"
     });
 }
-
 function hideModalBackground(){
-
     Object.assign(modalBackground.style, {
         visibility: "hidden",
         opacity: 0,
@@ -194,7 +176,6 @@ zip.addEventListener("input", () => {
         zip.setCustomValidity("");
     }
 });
-
 
 //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 //	START PAGE
